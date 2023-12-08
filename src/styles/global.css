@@ -11,6 +11,7 @@
 }
 
 :root {
+  /* farver */
   --black: #000000;
   --white: #ffffff;
   --grey500: #70727e;
@@ -19,8 +20,17 @@
   --grey100: #f0f0f0;
   --red500: #ff1054;
   --red100: #ff799f;
-  --s: 16px;
-  --xs: 10px;
+
+  /* font-sizes til p*/
+  --l: 2.3125rem;
+  --s: 1rem;
+  --xs: 0.625rem;
+
+  /* font-weigth */
+  --regular: 400;
+  --medium: 500;
+  --semibold: 600;
+  --bold: 700;
 }
 
 * {
@@ -30,41 +40,33 @@
 
 h1 {
   font-family: campton-bold;
-  font-size: 96px;
+  font-size: 6rem;
   color: var(--white);
 }
 
 h2 {
   font-family: campton-bold;
-  font-size: 60px;
+  font-size: 3.75rem;
 }
 
 h3 {
-  font-family: "Rubik", sans-serif;
-  font-size: 60px;
-  font-weight: 500;
-  color: var(--red100);
+  font-family: campton-semibold;
+  font-size: 2.3125rem;
 }
 
 h4 {
-  font-family: campton-semibold;
-  font-size: 37px;
-}
-
-h5 {
   font-family: "Rubik", sans-serif;
-  font-size: 37px;
-  font-weight: 600;
-}
-
-h6 {
-  font-family: "Rubik", sans-serif;
-  font-size: 23px;
-  font-weight: 500;
+  font-size: 1.4375rem;
+  font-weight: var(--medium);
 }
 
 p {
   font-family: "Rubik", sans-serif;
-  font-size: 23px;
+  font-size: 1.4375rem;
   font-weight: 400;
+}
+
+.highlight {
+  color: var(--red100);
+  font-size: 3.75rem;
 }
