@@ -38,12 +38,13 @@ import Textbox from "../components/Textbox.astro";
 
     h3 {
         color: var(--grey100);
+        text-align: right;
     }
 
     .background {
-        background-color: black;
-        opacity: 70%;
+        background-color: var(--black70);
         width: fit-content;
+        padding-inline: 20px;
     }
    
 
@@ -53,13 +54,14 @@ import Textbox from "../components/Textbox.astro";
    
     .singleuse_absolute {
         position: absolute;
-        top: 10px;
+        top: 20px;
         right: 10px;
     }
 
     .text_con {
         display: flex;
         flex-direction: column;
+        align-items: flex-end;
         gap: 100px;
 
     }
