@@ -1,5 +1,77 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Textbox from "../components/Textbox.astro";
 ---
 
 <BaseLayout title="Plastic Change" />
+
+<body>
+    <main>
+        <section class="singleuse_con">
+            <img src="../assets/img/svane.webp" alt="">
+        <div class="singleuse">
+            <div class="text_con">
+            <div class="background">
+                <h1>Single Use Sucks</h1>
+            </div>
+            <div class="background">
+                <h3>Plastik er fint når det <span>genbruges</span>,<br> dog er det når det er single use</h3>
+            </div>
+            <div class="background">
+                <h3>Kort sagt.<br><span>Vask og brug igen!</span></h3>
+            </div>
+        </div>
+        </div>
+    </section>
+    </main>
+</body>
+
+<style>
+    img {
+        max-width: 100%;
+     
+    }
+    main {
+        max-width: 1200px;
+        margin-inline: auto;
+    }
+    
+
+    h3 {
+        color: var(--grey100);
+    }
+
+    .background {
+        background-color: black;
+        opacity: 70%;
+        width: 500px;
+    }
+    span {
+        color: var(--red100);
+        font-size: 3.75rem;
+    }
+
+    .singleuse_con {
+        position: relative;
+    }
+   
+    .singleuse {
+        top: 10px;
+        right: 10px;
+    }
+
+    .flex_con {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .text_con {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+
+    }
+
+    
+</style>
