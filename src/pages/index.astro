@@ -7,18 +7,18 @@ import Textbox from "../components/Textbox.astro";
 
 <body>
     <main>
-        <section class="singleuse_con">
+        <section class="singleuse_section">
             <img src="../assets/img/svane.webp" alt="">
-        <div class="singleuse">
-            <div class="text_con">
+        <div class="singleuse_absolute">
+        <div class="text_con">
             <div class="background">
                 <h1>Single Use Sucks</h1>
             </div>
             <div class="background">
-                <h3>Plastik er fint når det <span>genbruges</span>,<br> dog er det når det er single use</h3>
+                <h3>Plastik er fint når det <span class="highlight">genbruges</span>,<br> dog er det når det er single use</h3>
             </div>
             <div class="background">
-                <h3>Kort sagt.<br><span>Vask og brug igen!</span></h3>
+                <h3>Kort sagt.<br><span class="highlight">Vask og brug igen!</span></h3>
             </div>
         </div>
         </div>
@@ -35,7 +35,6 @@ import Textbox from "../components/Textbox.astro";
         max-width: 1200px;
         margin-inline: auto;
     }
-    
 
     h3 {
         color: var(--grey100);
@@ -44,28 +43,20 @@ import Textbox from "../components/Textbox.astro";
     .background {
         background-color: black;
         opacity: 70%;
-        width: 500px;
+        width: fit-content;
     }
-    span {
-        color: var(--red100);
-        font-size: 3.75rem;
-    }
+   
 
-    .singleuse_con {
+    .singleuse_section {
         position: relative;
     }
    
-    .singleuse {
+    .singleuse_absolute {
+        position: absolute;
         top: 10px;
         right: 10px;
     }
 
-    .flex_con {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-    }
-    
     .text_con {
         display: flex;
         flex-direction: column;
