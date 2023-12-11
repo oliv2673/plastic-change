@@ -1,5 +1,58 @@
 ---
-
+const { text, procent, icon } = Astro.props;
 ---
 
-<style></style>
+<section class="con">
+  <p class="highlight">{procent}</p>
+  <p>{text}</p>
+  <div class="ring">
+    <div class="icon_ring">
+      <img src={icon} alt="" />
+    </div>
+  </div>
+</section>
+<style>
+  .highlight {
+    font-family: "Rubik", sans-serif;
+    font-size: 3.75rem;
+    font-weight: 500;
+  }
+
+  p {
+    text-align: center;
+  }
+
+  .ring {
+    margin-top: 2rem;
+    height: 400px;
+    width: 400px;
+    border-radius: 25rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    background-color: var(--red100);
+  }
+
+  .icon_ring {
+    height: 200px;
+    width: 200px;
+    background-color: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  img {
+    width: 10rem;
+    flex-shrink: 0;
+  }
+
+  .con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
