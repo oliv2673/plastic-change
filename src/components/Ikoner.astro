@@ -1,5 +1,28 @@
 ---
+const { img1, img2, img3, img4, alt1, alt2, alt3, alt4 } = Astro.props;
 
 ---
 
-<style></style>
+
+<section>
+    <div>
+    <h2>Hello worl</h2>
+    <h3>Hello!</h3>
+    </div>
+    <img src="../assets/icons/verden.svg" alt="">
+    <img src={img1} alt={alt1}>
+
+</section>
+
+
+<style>
+
+section {
+    background-color: blueviolet;
+}
+
+div {
+    background-color: pink;
+}
+
+</style>

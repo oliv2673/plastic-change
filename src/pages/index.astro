@@ -1,12 +1,16 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Textbox from "../components/Textbox.astro";
+import Ikoner from "../components/Textbox.astro";
+
 ---
 
 <BaseLayout title="Plastic Change" />
 
 <body>
     <main>
+        <section class="icons">
+            <Ikoner>
+        </section>
         <section class="singleuse_section">
             <img src="../assets/img/svane.webp" alt="">
         <div class="singleuse_absolute">
@@ -23,6 +27,9 @@ import Textbox from "../components/Textbox.astro";
         </div>
         </div>
     </section>
+    <Ikoner img1="../assets/img/svane.webp" alt1="helloo"
+    >
+
     </main>
 </body>
 
@@ -35,6 +42,10 @@ import Textbox from "../components/Textbox.astro";
         max-width: 1200px;
         margin-inline: auto;
     }
+
+    /*** Icons ***/
+
+    /**** Single Use sektion ****/
 
     h3 {
         color: var(--grey100);
