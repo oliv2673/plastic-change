@@ -1,6 +1,6 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
-import Ikoner from "../components/Textbox.astro";
+import Ikoner from "../components/Ikoner.astro";
 
 ---
 
@@ -9,7 +9,14 @@ import Ikoner from "../components/Textbox.astro";
 <body>
     <main>
         <section class="icons">
-            <Ikoner>
+            <Ikoner 
+            overskrift="Hvad er problemet med plastik?" 
+            svg1="../assets/icons/plastikflaske.svg" alt1="plastikflaske"
+            svg2="../assets/icons/havogmiljoe.svg" alt2="miljøet og dyrelivet"
+            svg3="../assets/icons/kemikalier.svg" alt3="skadelige kemikalier"
+            text1="Sollys og saltvand bryder plastikken op i mindre dele, og bliver til mikroplast"
+            text2="Mikroplasten truer havmiljøet, og kommer ind i fødekæden"
+            text3="Plastik er lavet af olie og indeholder skadelige kemikalier"
         </section>
         <section class="singleuse_section">
             <img src="../assets/img/svane.webp" alt="">
@@ -27,7 +34,6 @@ import Ikoner from "../components/Textbox.astro";
         </div>
         </div>
     </section>
-    <Ikoner img1="../assets/img/svane.webp" alt1="helloo"
     >
 
     </main>
