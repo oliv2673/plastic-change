@@ -1,5 +1,5 @@
 ---
-const { overskrift, svg1, svg2, svg3, svg4, alt1, alt2, alt3, alt4, text1, text2, text3, text4 } = Astro.props;
+const { hide, overskrift, svg1, svg2, svg3, svg4, alt1, alt2, alt3, alt4, text1, text2, text3, text4 } = Astro.props;
 
 ---
 
@@ -21,7 +21,7 @@ const { overskrift, svg1, svg2, svg3, svg4, alt1, alt2, alt3, alt4, text1, text2
             <img src={svg3} alt={alt3}>
             <p>{text3}</p>
         </div>
-        <div  class="svg">
+        <div id={hide} class="svg">
             <img src={svg4} alt={alt4}>
             <p>{text4}</p>
         </div>
@@ -38,22 +38,36 @@ section {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 20px 0 50px 0;
+    gap: 50px;
+    
 }
 
 .text, .svg, .svg_con {
     display: flex;
     justify-content: center;
     flex-direction: column;
+    gap: 20px;
 
 }
 
 p {
     width: 300px;
     text-align: center;
+    color: var(--grey500);
 }
 
 h2 {
     text-align: center;
+}
+
+.svg_con {
+    padding-block: 20px;
+    
+}
+
+#not_visible {
+    display: none;
 }
 
 /*** web ***/
