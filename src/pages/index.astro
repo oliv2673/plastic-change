@@ -1,5 +1,14 @@
 ---
 import BaseLayout from "../layouts/BaseLayout.astro";
+import Nav from "../components/Nav.astro";
+import Cta from "../components/Cta.astro";
+import Info from "../components/Info.astro";
+import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 ---
 
-<BaseLayout title="Plastic Change" />
+<BaseLayout title="Plastic Change">
+  <Nav />
+  <Info procent="40%" text="Bortskaffes på losseplads" icon="../assets/icons/losseplads.svg" />
+
+  <Nyhedsbrev />
+</BaseLayout>
