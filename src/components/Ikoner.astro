@@ -1,5 +1,80 @@
 ---
+const { hide, overskrift, svg1, svg2, svg3, svg4, alt1, alt2, alt3, alt4, text1, text2, text3, text4 } = Astro.props;
 
 ---
 
-<style></style>
+
+<section>
+    <div class="text">
+        <h2>{overskrift}</h2>
+    </div>
+    <div class="svg_con">
+        <div class="svg">
+            <img src={svg1} alt={alt1}>
+            <p>{text1}</p>
+        </div>
+        <div class="svg">
+            <img src={svg2} alt={alt2}>
+            <p>{text2}</p>
+        </div>
+        <div class="svg">
+            <img src={svg3} alt={alt3}>
+            <p>{text3}</p>
+        </div>
+        <div id={hide} class="svg">
+            <img src={svg4} alt={alt4}>
+            <p>{text4}</p>
+        </div>
+        </div>
+
+</section>
+
+
+<style>
+
+section {
+    background-color: var(--grey100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0 50px 0;
+    gap: 50px;
+    
+}
+
+.text, .svg, .svg_con {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+p {
+    width: 300px;
+    text-align: center;
+    color: var(--grey500);
+}
+
+h2 {
+    text-align: center;
+}
+
+.svg_con {
+    padding-block: 20px;
+    
+}
+
+#not_visible {
+    display: none;
+}
+
+/*** web ***/
+@media (min-width: 800px) {
+.svg_con {
+    flex-direction: row;
+}
+}
+
+</style>

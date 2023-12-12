@@ -4,11 +4,89 @@ import Nav from "../components/Nav.astro";
 import Cta from "../components/Cta.astro";
 import Info from "../components/Info.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
+import Ikoner from "../components/Ikoner.astro";
+import SoMe from "../components/So_me.astro";
 ---
 
 <BaseLayout title="Plastic Change">
   <Nav />
   <Info procent="40%" text="Bortskaffes på losseplads" icon="../assets/icons/losseplads.svg" />
 
-  <Nyhedsbrev />
+  <main>
+    <section class="icons">
+      <Ikoner
+        overskrift="Hvad er problemet med plastik?"
+        svg1="../assets/icons/plastikflaske.svg"
+        alt1="plastikflaske"
+        svg2="../assets/icons/havogmiljoe.svg"
+        alt2="miljøet og dyrelivet"
+        svg3="../assets/icons/kemikalier.svg"
+        alt3="skadelige kemikalier"
+        text1="Sollys og saltvand bryder plastikken op i mindre dele, og bliver til mikroplast"
+        text2="Mikroplasten truer havmiljøet, og kommer ind i fødekæden"
+        text3="Plastik er lavet af olie og indeholder skadelige kemikalier"
+        hide="not_visible"
+      />
+      <section class="singleuse_section">
+        <img src="../assets/img/svane.webp" alt="" />
+        <div class="singleuse_absolute">
+          <div class="text_con">
+            <div class="background">
+              <h1>Single Use Sucks</h1>
+            </div>
+            <div class="background">
+              <h3>Plastik er fint når det <span class="highlight">genbruges</span>,<br /> dog er det når det er single use</h3>
+            </div>
+            <div class="background">
+              <h3>Kort sagt.<br /><span class="highlight">Vask og brug igen!</span></h3>
+            </div>
+          </div>
+        </div>
+      </section>
+      <SoMe />
+      <Nyhedsbrev />
+    </section>
+  </main>
+
+  <style>
+    img {
+      max-width: 100%;
+    }
+    main {
+      max-width: 1200px;
+      margin-inline: auto;
+    }
+
+    /*** Icons ***/
+
+    /**** Single Use sektion ****/
+
+    h3 {
+      color: var(--grey100);
+      text-align: right;
+    }
+
+    .background {
+      background-color: var(--black70);
+      width: fit-content;
+      padding-inline: 20px;
+    }
+
+    .singleuse_section {
+      position: relative;
+    }
+
+    .singleuse_absolute {
+      position: absolute;
+      top: 20px;
+      right: 10px;
+    }
+
+    .text_con {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 100px;
+    }
+  </style>
 </BaseLayout>
