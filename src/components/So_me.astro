@@ -1,5 +1,35 @@
 ---
-
+import Hjerte from "../components/Hjerte.astro";
 ---
 
-<style></style>
+<section>
+  <h2>Støt os i kampen mod plastikforurening</h2>
+  <p>Dit bidrag går til hav- og miljøindsatser</p>
+  <div>
+    <img src="../assets/icons/facebook.svg" alt="Facebook icon" />
+    <img src="../assets/icons/linkedin.svg" alt="linkedin icon" />
+    <img src="../assets/icons/twitter.svg" alt="Twitter icon" />
+    <img src="../assets/icons/youtube.svg" alt="Youtube icon" />
+    <img src="../assets/icons/instagram.svg" alt="Instagram icon" />
+  </div>
+  <p>Følg os her</p>
+</section>
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 450px;
+    gap: 100px;
+    background-color: var(--grey100);
+  }
+
+  div {
+    text-align: center;
+  }
+  h2,
+  p {
+    text-align: center;
+  }
+</style>
