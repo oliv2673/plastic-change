@@ -1,5 +1,31 @@
 ---
-
+import Cta from "./Cta.astro";
 ---
 
-<style></style>
+<header>
+  <a>Plastic Change</a>
+  <div class="con">
+    <Cta title="Støt" link="/" />
+  </div>
+</header>
+
+<style>
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 2rem;
+    background-color: var(--black);
+    width: 100%;
+    height: 74px;
+  }
+
+  .con {
+    padding-right: 4rem;
+  }
+  a {
+    font-family: campton-semibold;
+    font-size: 2.3125rem;
+    color: var(--white);
+  }
+</style>

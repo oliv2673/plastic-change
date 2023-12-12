@@ -1,5 +1,18 @@
 ---
-
+const { title, link } = Astro.props;
 ---
 
-<style></style>
+<a href={link}><h4>{title}</h4></a>
+<style>
+  h4 {
+    color: var(--white);
+    background-color: var(--red500);
+    padding: 0.625rem 2.875rem;
+    border-radius: 1.875rem;
+  }
+
+  a {
+    display: flex;
+    text-decoration: none;
+  }
+</style>
