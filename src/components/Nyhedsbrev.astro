@@ -2,4 +2,48 @@
 
 ---
 
-<style></style>
+<section>
+  <div class="col">
+    <h2>Tilmeld dig vores nyhedsbrev her</h2>
+    <p>
+      Følg med i vores arbejde mod plastikforurening, og bliv opdateret med de
+      seneste nyheder
+    </p>
+  </div>
+  <form>
+    <input type="email" placeholder="Email" />
+  </form>
+</section>
+<style>
+  section {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    height: 450px;
+    gap: 100px;
+  }
+
+  input {
+    padding-inline: 16px;
+    font-size: 1rem;
+    width: 100%;
+    height: 3.125rem;
+    border: 1px solid var(--grey500);
+    margin-inline: 25%;
+  }
+
+  input:focus {
+    outline: none;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+  }
+
+  h2,
+  p {
+    text-align: center;
+  }
+</style>
