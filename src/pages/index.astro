@@ -7,11 +7,14 @@ import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import Ikoner from "../components/Ikoner.astro";
 
 ---
-
-<BaseLayout title="Plastic Change" />
-
-<body>
+<BaseLayout title="Plastic Change">
+    <Nav />
+    <Info procent="40%" text="Bortskaffes på losseplads" icon="../assets/icons/losseplads.svg" />
+  
+    <Nyhedsbrev />
+ 
     <main>
+        
         <section class="icons">
             <Ikoner 
             overskrift="Hvad er problemet med plastik?" 
@@ -21,7 +24,7 @@ import Ikoner from "../components/Ikoner.astro";
             text1="Sollys og saltvand bryder plastikken op i mindre dele, og bliver til mikroplast"
             text2="Mikroplasten truer havmiljøet, og kommer ind i fødekæden"
             text3="Plastik er lavet af olie og indeholder skadelige kemikalier"
-            hide="not_visible"
+            hide="not_visible">
         </section>
         <section class="singleuse_section">
             <img src="../assets/img/svane.webp" alt="">
@@ -39,10 +42,9 @@ import Ikoner from "../components/Ikoner.astro";
         </div>
         </div>
     </section>
-    >
-
     </main>
-</body>
+</BaseLayout>
+
 
 <style>
     img {
