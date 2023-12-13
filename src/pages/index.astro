@@ -9,14 +9,10 @@ import SoMe from "../components/So_me.astro";
 ---
 
 <BaseLayout title="Plastic Change">
-    <Nav />   
- 
+    <Nav />
     <main>
         <section class="hero_con">
-
             <video src="../assets/video/plastik_suppe.mp4"></video>
-        
-       
                 <div class="text_hero_con">
                     <div class="hero_background">
                         <h3><span class="highlight">Plastic Change </span>kæmper for en <br>verden uden plastikforurening</h3>
@@ -34,7 +30,6 @@ import SoMe from "../components/So_me.astro";
                 </div>
 
         </section>
-        
             <Info procent="40%" text="Bortskaffes på losseplads" icon="../assets/icons/losseplads.svg" />
         <section class="icons">
             <Ikoner 
@@ -125,6 +120,7 @@ import SoMe from "../components/So_me.astro";
         flex-direction: column;
         gap: 100px;
         align-items: center;
+        padding-top: 10rem; /*skal måske rettes når vi putter animation på?*/
     }
 
 
