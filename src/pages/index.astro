@@ -8,13 +8,34 @@ import Ikoner from "../components/Ikoner.astro";
 
 ---
 <BaseLayout title="Plastic Change">
-    <Nav />
-    <Info procent="40%" text="Bortskaffes på losseplads" icon="../assets/icons/losseplads.svg" />
-  
-    
+    <Nav />   
  
     <main>
+        <section class="hero_con">
+
+            <video src="../assets/video/plastik_suppe.mp4"></video>
         
+            <div class="hero_con_absolute">
+                <div class="text_hero_con">
+                    <div class="hero_background">
+                        <h3><span class="highlight">Plastic Change </span>kæmper for en <br>verden uden plastikforurening</h3>
+                    </div>
+                    <div class="hero_background">
+                        <h3>Plastik forsager sygdom, handicap og for<br><span class="highlight">tidlig død</span></h3>
+                    </div>
+                    <div class="hero_background">
+                        <h3>Vi udleder i dag <span class="highlight">8-10 mio. ton<br></span>plastik til havet om året.</h3>
+                    </div>
+                    <div class="hero_background">
+                        <h3>Det svarer til <span class="highlight">1 lastbil</span> med plastik<br><span class="highlight">hvert minut.</span></h3>
+                    </div>
+                </div>
+            </div>
+                </div>
+
+        </section>
+        
+            <Info procent="40%" text="Bortskaffes på losseplads" icon="../assets/icons/losseplads.svg" />
         <section class="icons">
             <Ikoner 
             overskrift="Hvad er problemet med plastik?" 
@@ -27,17 +48,17 @@ import Ikoner from "../components/Ikoner.astro";
             hide="not_visible">
         </section>
         <section class="singleuse_section">
-            <img src="../assets/img/svane.webp" alt="">
-        <div class="singleuse_absolute">
+            <img src="../assets/img/svane.webp" alt="en svane som har bygget rede af plastskrald">
+        <div class="con_absolute">
         <div class="text_con">
             <div class="background">
-                <h1>Single Use Sucks</h1>
+                <h1 class="right">Single Use Sucks</h1>
             </div>
             <div class="background">
-                <h3>Plastik er fint når det <span class="highlight">genbruges</span>,<br> dog er det når det er single use</h3>
+                <h3 class="right">Plastik er fint når det <span class="highlight">genbruges</span>,<br> dog er det når det er single use</h3>
             </div>
             <div class="background">
-                <h3>Kort sagt.<br><span class="highlight">Vask og brug igen!</span></h3>
+                <h3 class="right">Kort sagt.<br><span class="highlight">Vask og brug igen!</span></h3>
             </div>
         </div>
         </div>
@@ -49,7 +70,7 @@ import Ikoner from "../components/Ikoner.astro";
 
 
 <style>
-    img {
+    img, video {
         max-width: 100%;
      
     }
@@ -58,31 +79,38 @@ import Ikoner from "../components/Ikoner.astro";
         margin-inline: auto;
     }
 
-    /*** Icons ***/
+    
 
     /**** Single Use sektion ****/
 
     h3 {
         color: var(--grey100);
+    }
+
+    .right {
         text-align: right;
     }
 
-    .background {
+    .background, .hero_background {
         background-color: var(--black70);
-        width: fit-content;
         padding-inline: 20px;
     }
-   
 
-    .singleuse_section {
+    .background {
+    width: fit-content;
+    }
+
+    .singleuse_section, .hero_con {
         position: relative;
     }
    
-    .singleuse_absolute {
+    .con_absolute {
         position: absolute;
         top: 20px;
         right: 10px;
     }
+
+   
 
     .text_con {
         display: flex;
@@ -92,5 +120,29 @@ import Ikoner from "../components/Ikoner.astro";
 
     }
 
-    
+    /*** Hero ***/
+
+    .text_hero_con {
+        display: flex;
+        flex-direction: column;
+        gap: 100px;
+        align-items: flex-start;
+
+
+    }
+
+
+    .hero_background {
+        width: 730px;
+    }
+
+    .hero_con {
+        overflow: hidden;
+    }
+
+    video {
+        position: fixed;
+        max-width: 1200px;
+        z-index: -999;
+    }
 </style>
