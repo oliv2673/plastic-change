@@ -22,37 +22,49 @@ const { overskrift, valg} = Astro.props;
         <form class="form_con" action="">
             <label for="name"></label><input type="text" placeholder="Andet beløb" />
             <div class="radio-toolbar">
+                <h3 class="betal_overskrift">Betalingsform</h3>
             <input type="radio" name="betaling" id="mobilepay" required="required"><label class="small" for="mobile">Mobilepay </label> <br>
-            <input type="radio" name="betaling" id="kort" required="required"><label class="small" for="kort">Betalingskort</label><br>
+            <input type="radio" name="betaling" id="kort" required="required"><label class="small" for="kort">Betalingskort</label><br></div>
+
 
             <div class="input-con"><label for="name">Fornavn<span>*</span></label><input type="text" /></div>
             <div class="input-con"><label for="lname">Efternavn<span>*</span></label><input type="text" /></div>
             <div class="input-con"><label for="mail">Email<span>*</span></label><input type="text"/></div>
             <div class="input-con"><label for="phone">Telefon</label><input type="text"/></div>
             <div class="input-con"><label for="postalcode">Postnr.</label><input type="text"></div>
-            <div class="mellemrum"><input type="checkbox" name="fradrag" id="fradrag"><label class="small" for="fradrag">jeg ønsker fradrag fra SKAT</label></div>
+            <div class="mellemrum"><input type="checkbox" name="fradrag" id="fradrag"><label class="small" for="fradrag">Jeg ønsker fradrag fra SKAT</label></div>
             <div class="mellemrum"><input type="radio" name="betaling" id="mobilepay" required="required"><label class="detmedsmaat" for="mobile">Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores <span><a href="http://www.google.com">privatlivspolitik.</a></span> </label></div>
             
         </form>
 
         <div class="knap_con">
-        <Cta title="Støt" link="/stoet1" type="solid" /></div>
+        <Cta title="Støt" link="/tak" type="solid" /></div>
     </div>
 </section>
 
 <style>
     
 
-    section, .form_con, .knap_con, .mellemrum {
+    section, .form_con, .knap_con, .mellemrum, .form_buttons {
         display: flex;
         flex-direction: column;
         gap: 1rem;
     }
     
     
-    .mellemrum {
+    .mellemrum, .form_buttons  {
         flex-direction: row;
         gap: 1rem;
+        padding-top: 1.5rem;
+    }
+
+    .input-con, .radio-toolbar {
+        padding-top: 1.5rem;
+
+    }
+
+    .radio-toolbar .small{
+        padding-bottom: 1.5rem;
     }
     section {
         padding: 3rem;
@@ -74,7 +86,7 @@ const { overskrift, valg} = Astro.props;
     max-width: 500px;
     }
 
-    label {
+    label, .betal_overskrift {
     font-family: "Rubik", sans-serif;
     font-size: 1.4375rem;
     font-weight: var(--medium);}
