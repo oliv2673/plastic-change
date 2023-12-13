@@ -18,26 +18,24 @@ const { overskrift, valg} = Astro.props;
             <Prisknap
             tal="125"/>
         </div>
-        <form action="">
+        
+        <form class="form_con" action="">
             <label for="name"></label><input type="text" placeholder="Andet beløb" />
             <div class="radio-toolbar">
             <input type="radio" name="betaling" id="mobilepay" required="required"><label class="small" for="mobile">Mobilepay </label> <br>
             <input type="radio" name="betaling" id="kort" required="required"><label class="small" for="kort">Betalingskort</label><br>
-        </div>
 
-            <label for="name">Fornavn<span>*</span></label><input type="text" />
-            <label for="lname">Efternavn<span>*</span></label><input type="text" />
-            <label for="mail">Email<span>*</span></label><input type="text"/>
-            <label for="phone">Telefon</label><input type="text"/>
-            <label for="postalcode">Postnr.</label><input type="text">
-
-            <input type="checkbox" name="fradrag" id="fradrag"><label class="small" for="fradrag">jeg ønsker fradrag fra SKAT</label><br>
-            <input type="radio" name="betaling" id="mobilepay" required="required"><label class="detmedsmaat" for="mobile">Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores <span><a href="http://www.google.com">privatlivspolitik.</a></span> </label> <br>
-        
+            <div class="input-con"><label for="name">Fornavn<span>*</span></label><input type="text" /></div>
+            <div class="input-con"><label for="lname">Efternavn<span>*</span></label><input type="text" /></div>
+            <div class="input-con"><label for="mail">Email<span>*</span></label><input type="text"/></div>
+            <div class="input-con"><label for="phone">Telefon</label><input type="text"/></div>
+            <div class="input-con"><label for="postalcode">Postnr.</label><input type="text"></div>
+            <div class="mellemrum"><input type="checkbox" name="fradrag" id="fradrag"><label class="small" for="fradrag">jeg ønsker fradrag fra SKAT</label></div>
+            <div class="mellemrum"><input type="radio" name="betaling" id="mobilepay" required="required"><label class="detmedsmaat" for="mobile">Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores <span><a href="http://www.google.com">privatlivspolitik.</a></span> </label></div>
             
         </form>
 
-        <div class="knap">
+        <div class="knap_con">
         <Cta title="Støt" link="/stoet1" type="solid" /></div>
     </div>
 </section>
@@ -45,20 +43,24 @@ const { overskrift, valg} = Astro.props;
 <style>
     
 
-    section, .form_con, .knap {
+    section, .form_con, .knap_con, .mellemrum {
         display: flex;
         flex-direction: column;
+        gap: 1rem;
+    }
+    
+    
+    .mellemrum {
+        flex-direction: row;
+        gap: 1rem;
     }
     section {
-        
-        gap: 2rem;
         padding: 3rem;
         background-color: var(--grey100);
-
     }
-    .knap {
+    .knap_con {
         padding-top: 2rem;
-        align-self: center;
+        align-items: center;
     }
     input[type=text], select { 
         width: 100%;
@@ -102,14 +104,5 @@ const { overskrift, valg} = Astro.props;
     a:hover {
         text-decoration: underline;
     }
-    ::-ms-input-placeholder { /* Edge 12-18 */
-  color: red;
-}
-
-    ::placeholder {
-  color: red;
-}
-
-    /****** radio- + checkbox style ******/
-
+    
 </style>
