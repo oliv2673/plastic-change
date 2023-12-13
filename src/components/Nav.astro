@@ -3,10 +3,10 @@ import Cta from "./Cta.astro";
 ---
 
 <header>
-  <a>Plastic Change</a>
+  <a href="/">Plastic Change</a>
   <div class="con">
-    <Cta title="Bliv medlem" link="/" type="line" />
-    <Cta title="Støt" link="/" type="solid" />
+    <Cta title="Bliv medlem" link="/medlem" type="line" />
+    <Cta title="Støt" link="/stoet1" type="solid" />
   </div>
 </header>
 
@@ -31,6 +31,7 @@ import Cta from "./Cta.astro";
     color: var(--white);
     padding-left: 2rem;
     transition: 300ms;
+    text-decoration: none;
   }
 
   a:hover {
