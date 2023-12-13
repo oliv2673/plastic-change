@@ -6,136 +6,161 @@ import Info from "../components/Info.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import Ikoner from "../components/Ikoner.astro";
 import SoMe from "../components/So_me.astro";
+import Hjerte from "../components/Hjerte.astro";
 ---
 
 <BaseLayout title="Plastic Change">
-    <Nav />
-    <main>
-        <section class="hero_con">
-            <video src="../assets/video/plastik_suppe.mp4"></video>
-                <div class="text_hero_con">
-                    <div class="hero_background">
-                        <h3><span class="highlight">Plastic Change </span>kæmper for en <br>verden uden plastikforurening</h3>
-                    </div>
-                    <div class="hero_background">
-                        <h3>Plastik forsager sygdom, handicap og for<br><span class="highlight">tidlig død</span></h3>
-                    </div>
-                    <div class="hero_background">
-                        <h3>Vi udleder i dag <span class="highlight">8-10 mio. ton<br></span>plastik til havet om året.</h3>
-                    </div>
-                    <div class="hero_background">
-                        <h3>Det svarer til <span class="highlight">1 lastbil</span> med plastik<br><span class="highlight">hvert minut.</span></h3>
-                    </div>
-                    </div>
-                </div>
-
-        </section>
-            <Info procent="40%" text="Bortskaffes på losseplads" icon="../assets/icons/losseplads.svg" />
-        <section class="icons">
-            <Ikoner 
-            overskrift="Hvad er problemet med plastik?" 
-            svg1="../assets/icons/plastikflaske.svg" alt1="plastikflaske"
-            svg2="../assets/icons/havogmiljoe.svg" alt2="miljøet og dyrelivet"
-            svg3="../assets/icons/kemikalier.svg" alt3="skadelige kemikalier"
-            text1="Sollys og saltvand bryder plastikken op i mindre dele, og bliver til mikroplast"
-            text2="Mikroplasten truer havmiljøet, og kommer ind i fødekæden"
-            text3="Plastik er lavet af olie og indeholder skadelige kemikalier"
-            hide="not_visible">
-        </section>
-        <section class="singleuse_section">
-            <img src="../assets/img/svane.webp" alt="en svane som har bygget rede af plastskrald">
-        <div class="con_absolute">
-        <div class="text_con">
-            <div class="background">
-                <h1 class="right">Single Use Sucks</h1>
-            </div>
-            <div class="background">
-                <h3 class="right">Plastik er fint når det <span class="highlight">genbruges</span>,<br> dog er det når det er single use</h3>
-            </div>
-            <div class="background">
-                <h3 class="right">Kort sagt.<br><span class="highlight">Vask og brug igen!</span></h3>
-            </div>
-          </div>
+  <Nav />
+  <Hjerte mode="fixed" />
+  <main>
+    <section class="hero_con">
+      <video src="../assets/video/plastik_suppe.mp4"></video>
+      <div class="text_hero_con">
+        <div class="hero_background">
+          <h3>
+            <span class="highlight">Plastic Change</span>kæmper for en <br
+            />verden uden plastikforurening
+          </h3>
         </div>
-      </section>
-      <SoMe />
-      <Nyhedsbrev />
+        <div class="hero_background">
+          <h3>
+            Plastik forsager sygdom, handicap og for<br /><span
+              class="highlight">tidlig død</span
+            >
+          </h3>
+        </div>
+        <div class="hero_background">
+          <h3>
+            Vi udleder i dag <span class="highlight">8-10 mio. ton<br /></span
+            >plastik til havet om året.
+          </h3>
+        </div>
+        <div class="hero_background">
+          <h3>
+            Det svarer til <span class="highlight">1 lastbil</span> med plastik<br
+            /><span class="highlight">hvert minut.</span>
+          </h3>
+        </div>
+      </div>
     </section>
   </main>
+  <Info
+    procent="40%"
+    text="Bortskaffes på losseplads"
+    icon="../assets/icons/losseplads.svg"
+  />
+  <section class="icons">
+    <Ikoner
+      overskrift="Hvad er problemet med plastik?"
+      svg1="../assets/icons/plastikflaske.svg"
+      alt1="plastikflaske"
+      svg2="../assets/icons/havogmiljoe.svg"
+      alt2="miljøet og dyrelivet"
+      svg3="../assets/icons/kemikalier.svg"
+      alt3="skadelige kemikalier"
+      text1="Sollys og saltvand bryder plastikken op i mindre dele, og bliver til mikroplast"
+      text2="Mikroplasten truer havmiljøet, og kommer ind i fødekæden"
+      text3="Plastik er lavet af olie og indeholder skadelige kemikalier"
+      hide="not_visible"
+    />
+    <section class="singleuse_section">
+      <img
+        src="../assets/img/svane.webp"
+        alt="en svane som har bygget rede af plastskrald"
+      />
+      <div class="con_absolute">
+        <div class="text_con">
+          <div class="background">
+            <h1 class="right">Single Use Sucks</h1>
+          </div>
+          <div class="background">
+            <h3 class="right">
+              Plastik er fint når det <span class="highlight">genbruges</span
+              >,<br /> dog er det når det er single use
+            </h3>
+          </div>
+          <div class="background">
+            <h3 class="right">
+              Kort sagt.<br /><span class="highlight">Vask og brug igen!</span>
+            </h3>
+          </div>
+        </div>
+      </div>
+    </section>
+    <SoMe mode="dark" />
+    <Nyhedsbrev mode="light" />
+  </section>
+</BaseLayout>
 
 <style>
-    img, video {
-        max-width: 100%;
-     
-    }
-    main {
-      max-width: 1200px;
-      margin-inline: auto;
-    }
+  img,
+  video {
+    max-width: 100%;
+  }
+  main {
+    max-width: 1200px;
+    margin-inline: auto;
+  }
 
-    
+  /**** Single Use sektion ****/
 
-    /**** Single Use sektion ****/
+  h3 {
+    color: var(--grey100);
+  }
 
-    h3 {
-        color: var(--grey100);
-    }
+  .right {
+    text-align: right;
+  }
 
-    .right {
-        text-align: right;
-    }
+  .background,
+  .hero_background {
+    background-color: var(--black70);
+    padding-inline: 20px;
+  }
 
-    .background, .hero_background {
-        background-color: var(--black70);
-        padding-inline: 20px;
-    }
-
-    .background {
+  .background {
     width: fit-content;
-    }
+  }
 
-    .singleuse_section, .hero_con {
-        position: relative;
-    }
-   
-    .con_absolute {
-        position: absolute;
-        top: 20px;
-        right: 10px;
-    }
+  .singleuse_section,
+  .hero_con {
+    position: relative;
+  }
 
-   
+  .con_absolute {
+    position: absolute;
+    top: 20px;
+    right: 10px;
+  }
 
-    .text_con {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      gap: 100px;
-    }
+  .text_con {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 100px;
+  }
 
-    /*** Hero ***/
+  /*** Hero ***/
 
-    .text_hero_con {
-        display: flex;
-        flex-direction: column;
-        gap: 100px;
-        align-items: center;
-        padding-top: 10rem; /*skal måske rettes når vi putter animation på?*/
-    }
+  .text_hero_con {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+    align-items: center;
+    padding-top: 10rem; /*skal måske rettes når vi putter animation på?*/
+  }
 
+  .hero_background {
+    width: 730px;
+  }
 
-    .hero_background {
-        width: 730px;
-    }
+  .hero_con {
+    overflow: hidden;
+  }
 
-    .hero_con {
-        overflow: hidden;
-
-    }
-
-    video {
-        position: fixed;
-        max-width: 1200px;
-        z-index: -999;
-    }
+  video {
+    position: fixed;
+    max-width: 1200px;
+    z-index: -999;
+  }
 </style>

@@ -1,8 +1,9 @@
 ---
-
+import Cta from "./Cta.astro";
+const { mode } = Astro.props;
 ---
 
-<section>
+<section class={mode}>
   <div class="col">
     <h2>Tilmeld dig vores nyhedsbrev her</h2>
     <p>
@@ -12,6 +13,7 @@
   </div>
   <form>
     <input type="email" placeholder="Email" />
+    <Cta title="tilmeld" type="solid" />
   </form>
 </section>
 <style>
@@ -21,16 +23,23 @@
     flex-direction: column;
     width: 100%;
     height: 450px;
-    gap: 100px;
+    gap: 80px;
   }
 
+  .dark {
+    background-color: var(--grey100);
+  }
+
+  .light {
+    background-color: var(--white);
+  }
   input {
     padding-inline: 16px;
     font-size: 1rem;
     width: 100%;
     height: 3.125rem;
     border: 1px solid var(--grey500);
-    margin-inline: 25%;
+    max-width: 450px;
   }
 
   input:focus {
@@ -40,6 +49,8 @@
   form {
     display: flex;
     justify-content: center;
+    gap: 20px;
+    margin-inline: 20px;
   }
 
   h2,

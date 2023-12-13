@@ -1,5 +1,56 @@
 ---
+const { mode } = Astro.props;
 ---
 
-<img src="../assets/icons/hjerte.svg" alt="Hjerte knap" />
-<style></style>
+<a href="/"
+  ><div class="hjerte" id={mode}>
+    <h4>Støt</h4>
+  </div>
+</a>
+<style>
+  h4 {
+    color: var(--white);
+    z-index: 11;
+    padding-inline: 25px;
+    padding-top: 30px;
+  }
+
+  a {
+    text-decoration: none;
+  }
+  #center {
+    display: flex;
+    justify-content: center;
+  }
+
+  #fixed {
+    top: 85%;
+    left: 2%;
+    position: fixed;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+  .hjerte {
+    z-index: 10;
+    width: 100px;
+    height: 100px;
+    background-image: url("../assets/icons/hjerte.svg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+
+  .hjerte:hover {
+    animation: pulsate 2s ease-in-out infinite both;
+  }
+
+  @keyframes pulsate {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(0.9);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+</style>
