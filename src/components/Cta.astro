@@ -1,12 +1,10 @@
 ---
-const { title, link } = Astro.props;
+const { title, link, type } = Astro.props;
 ---
 
-<a href={link}><h4>{title}</h4></a>
+<a href={link}><h4 class={type}>{title}</h4></a>
 <style>
   h4 {
-    color: var(--white);
-    background-color: var(--red500);
     padding: 0.625rem 2.875rem;
     border-radius: 1.875rem;
   }
@@ -14,5 +12,28 @@ const { title, link } = Astro.props;
   a {
     display: flex;
     text-decoration: none;
+  }
+
+  .solid {
+    color: var(--white);
+    background-color: var(--red500);
+    border: 3px solid var(--red500);
+    transition: 300ms;
+  }
+
+  .solid:hover {
+    background-color: var(--red100);
+    border: 3px solid var(--red100);
+  }
+
+  .line {
+    color: var(--white);
+    border: 3px solid var(--white);
+    transition: 300ms;
+  }
+
+  .line:hover {
+    color: var(--grey400);
+    border: 3px solid var(--grey400);
   }
 </style>
