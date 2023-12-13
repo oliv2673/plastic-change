@@ -1,20 +1,115 @@
 ---
-const { overskrift} = Astro.props;
+import Cta from "../components/Cta.astro";
+import Prisknap from "../components/Prisknap.astro";
+
+const { overskrift, valg} = Astro.props;
 ---
 
 
 <section>
     <h3>{overskrift}</h3>
-    <p>Hello</p>
+    <p>{valg}</p>          
+      <div class="form_con">
+        <div class="form_buttons">
+            <Prisknap
+            tal="50"/>
+            <Prisknap
+            tal="75"/>
+            <Prisknap
+            tal="125"/>
+        </div>
+        <form action="">
+            <label for="name"></label><input type="text" placeholder="Andet beløb" />
+            <div class="radio-toolbar">
+            <input type="radio" name="betaling" id="mobilepay" required="required"><label class="small" for="mobile">Mobilepay </label> <br>
+            <input type="radio" name="betaling" id="kort" required="required"><label class="small" for="kort">Betalingskort</label><br>
+        </div>
 
+            <label for="name">Fornavn<span>*</span></label><input type="text" />
+            <label for="lname">Efternavn<span>*</span></label><input type="text" />
+            <label for="mail">Email<span>*</span></label><input type="text"/>
+            <label for="phone">Telefon</label><input type="text"/>
+            <label for="postalcode">Postnr.</label><input type="text">
+
+            <input type="checkbox" name="fradrag" id="fradrag"><label class="small" for="fradrag">jeg ønsker fradrag fra SKAT</label><br>
+            <input type="radio" name="betaling" id="mobilepay" required="required"><label class="detmedsmaat" for="mobile">Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores <span><a href="http://www.google.com">privatlivspolitik.</a></span> </label> <br>
+        
+            
+        </form>
+
+        <div class="knap">
+        <Cta title="Støt" link="/stoet1" type="solid" /></div>
+    </div>
 </section>
 
-
-
-
 <style>
-    section {
-        background-color: pink;
-        height: 100px;
+    
+
+    section, .form_con, .knap {
+        display: flex;
+        flex-direction: column;
     }
+    section {
+        
+        gap: 2rem;
+        padding: 3rem;
+        background-color: var(--grey100);
+
+    }
+    .knap {
+        padding-top: 2rem;
+        align-self: center;
+    }
+    input[type=text], select { 
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid var(--grey500);
+        border-radius: 4px;
+        box-sizing: border-box;}
+    .form_con {
+    max-width: 500px;
+    }
+
+    label {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.4375rem;
+    font-weight: var(--medium);}
+    
+    span, a {
+    color: var(--red500);}
+
+    .small {
+        font-family: "Rubik", sans-serif;
+        font-size: 1.4375rem;
+        font-weight: 400;
+        color: var(--grey500);
+
+    }
+
+    .detmedsmaat {
+        font-family: "Rubik", sans-serif;
+        font-size: 0.9rem;
+        font-weight: 400;
+        color: var(--grey500);
+
+    }
+
+    a {
+        text-decoration: none;
+    }
+    a:hover {
+        text-decoration: underline;
+    }
+    ::-ms-input-placeholder { /* Edge 12-18 */
+  color: red;
+}
+
+    ::placeholder {
+  color: red;
+}
+
+    /****** radio- + checkbox style ******/
+
 </style>

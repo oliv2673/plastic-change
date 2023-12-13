@@ -7,12 +7,34 @@ import Formular from "../components/Formular.astro";
 <BaseLayout>
 <Nav />
 <section>
-<img src="../assets/img/plasticchangerunivers13.webp" alt="havet fuldt med plastik skrald">
-</Formular
-overskrift = "Plastic Change"
+<div class="forms">
+<Formular
+overskrift="Støt os her"
+valg="Vælg dit månedlige beløb"
 >
+</div>
 
 </section>
+</BaseLayout>
 
-<style></style>
-</BaseLayout>;
+<style>
+    img {
+        width: 100%;
+    }
+    section {
+        background-image: url("../assets/img/svane.webp");
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        background-size: cover;
+        background-position: center 10%;
+        align-items: center;
+    }
+
+    .forms {
+        display: flex;
+        justify-content: center;
+        padding-top: 100px;
+    }
+</style>
+

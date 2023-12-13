@@ -1,0 +1,63 @@
+---
+const { tal } = Astro.props;
+---
+
+<button class="knap">{tal}</button>
+
+<script>
+    window.addEventListener("load", sidenVises);
+
+function sidenVises() {
+  console.log("sidenVises");
+  // Tilføj click event til alle knapper med klassen knap
+  document.querySelectorAll(".knap").forEach(function (btn) {
+    btn.addEventListener("click", klick);
+  });
+}
+
+function klick() {
+  console.log("click");
+
+  // fjern "clicked" class fra alle knapper
+  document.querySelectorAll(".knap").forEach(function (btn) {
+    btn.classList.remove("clicked");
+  });
+
+  // tilføj "clicked" class til knappen
+  this.classList.add("clicked");
+}
+</script>
+
+
+<style>
+button {
+  background-color:var(--white);
+  color: var(--grey500);
+  border: 1px solid var(--grey500);
+  border-radius: 50%;  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+}
+
+button:hover {
+    color: var(--white);
+    background-color: var(--red100);
+    border: 1.5px solid var(--red100);
+  }
+
+  button.clicked{
+    color: var(--white);
+    background-color: var(--red500);
+    border: 1.5px solid var(--red500);
+  }
+  .knap {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey500);
+}
+</style>
+
