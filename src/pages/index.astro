@@ -13,8 +13,8 @@ import Hjerte from "../components/Hjerte.astro";
   <Nav />
   <Hjerte mode="fixed" />
   <video loop autoplay muted>
-    <source src="../assets/video/plastik_suppe.mp4" type="video/mp4">
-    Your browser does not support the video tag.
+    <source src="../assets/video/plastik_suppe.mp4" type="video/mp4" />
+     Your browser does not support the video tag.
   </video>
   <main>
     <a href="/stoet2">LINK til stoet2</a>
@@ -130,6 +130,10 @@ import Hjerte from "../components/Hjerte.astro";
     position: relative;
   }
 
+  .singleuse_section {
+    background-color: var(--grey100);
+  }
+
   .con_absolute {
     position: absolute;
     top: 20px;
@@ -166,6 +170,6 @@ import Hjerte from "../components/Hjerte.astro";
     position: fixed;
     max-width: 100%;
     z-index: -999;
-    top:0;
+    top: 0;
   }
 </style>
