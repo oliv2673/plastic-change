@@ -12,7 +12,7 @@ const { mode } = Astro.props;
     color: var(--white);
     z-index: 11;
     padding-inline: 25px;
-    padding-top: 30px;
+    padding-top: 35px;
   }
 
   a {
@@ -24,7 +24,9 @@ const { mode } = Astro.props;
   }
 
   #fixed {
-    top: 85%;
+    display: flex;
+    justify-content: center;
+    top: 75%;
     left: 2%;
     position: fixed;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
@@ -36,6 +38,7 @@ const { mode } = Astro.props;
     background-image: url("../assets/icons/hjerte.svg");
     background-size: cover;
     background-repeat: no-repeat;
+    animation: pulsate 2s ease-in-out infinite both;
   }
 
   .hjerte:hover {
