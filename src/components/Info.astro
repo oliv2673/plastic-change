@@ -45,7 +45,7 @@ const { text, procent, icon, ringp } = Astro.props;
   }
 
   img {
-    width: 9rem;
+    max-width: 85%;
     flex-shrink: 0;
     padding-bottom: 10px;
   }
@@ -58,14 +58,14 @@ const { text, procent, icon, ringp } = Astro.props;
   /***** Mobile ******/
   @media (max-width: 800px) {
     img {
-    width: 7rem;
-  }
+      width: 7rem;
+    }
 
-  .highlight {
-    font-family: "Rubik", sans-serif;
-    font-size: 3rem;
-    font-weight: 500;
-  }
+    .highlight {
+      font-family: "Rubik", sans-serif;
+      font-size: 3rem;
+      font-weight: 500;
+    }
   }
 
   @property --percentage {
@@ -147,8 +147,6 @@ const { text, procent, icon, ringp } = Astro.props;
     }
   }
 
-
   @media (max-width: 800px) {
-  
   }
 </style>
