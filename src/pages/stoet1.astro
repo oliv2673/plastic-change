@@ -5,11 +5,27 @@ import Citat from "../components/Citat.astro";
 import Omtanke from "../components/Omtanke.astro";
 import Nyhedsbrev from "../components/Nyhedsbrev.astro";
 import SoMe from "../components/So_me.astro";
+import Ikoner from "../components/Ikoner.astro";
 ---
 
 <BaseLayout />
 <Nav />
 <Citat />
+<Ikoner
+overskrift="Din støtte går blandt andet til at:"
+    svg1="../assets/icons/havogmiljoe.svg"
+    alt1="hav og miljøet"
+    svg2="../assets/icons/fodaftryk.svg"
+    alt2="klima aftryk"
+    svg3="../assets/icons/jordklodespirre.svg"
+    alt3="jordens resourcer"
+    svg4="../assets/icons/kemikalier.svg"
+    alt4="skadelige kemikalier"
+    text1="Beskytte naturen og havet mod plastikforurening"
+    text2="Mindske klimaaftryk"
+    text3="Skåne Jordens ressourcer"
+    text4="Beskytte folkesundheden mod skadelig kemi"
+    />
 <Omtanke />
 <SoMe mode="light" />
 <Nyhedsbrev mode="dark" />
