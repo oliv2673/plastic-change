@@ -35,6 +35,9 @@
 
   /* shadows */
   --shadows: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+  /*padding*/
+  --padding-sections: 7rem;
 }
 
 * {
@@ -74,26 +77,4 @@ p {
 .highlight {
   color: var(--red100);
   font-size: 2.75rem;
-}
-
-.small {
-  font-family: "Rubik", sans-serif;
-  font-size: 1rem;
-  font-weight: 400;
-  color: var(--grey500);
-  padding-left: 0.5rem;
-}
-
-.detmedsmaat {
-  font-family: "Rubik", sans-serif;
-  font-size: 0.9rem;
-  font-weight: 400;
-  color: var(--grey500);
-}
-
-label,
-.betal_overskrift {
-  font-family: "Rubik", sans-serif;
-  font-size: 1rem;
-  font-weight: var(--medium);
 }
