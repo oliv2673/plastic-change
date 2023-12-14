@@ -6,7 +6,7 @@ import Cta from "./Cta.astro";
   <a href="/">Plastic Change</a>
   <div class="con">
     <Cta title="Bliv medlem" link="/medlem" type="line" />
-    <Cta title="Støt" link="/stoet1" type="solid" />
+    <div class="hide"><Cta title="Støt" link="/stoet1" type="solid" /></div>
   </div>
 </header>
 
@@ -37,4 +37,26 @@ import Cta from "./Cta.astro";
   a:hover {
     color: var(--grey400);
   }
+
+  @media (max-width: 800px) {
+    .hide {
+      display: none;
+    }
+
+    a {
+    font-family: campton-semibold;
+    font-size: 1.5rem;
+    color: var(--white);
+    padding-left: 2rem;
+    transition: 300ms;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+
+
+  }
+
+
+
+
 </style>
