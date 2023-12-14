@@ -7,7 +7,7 @@ import Nav from "../components/Nav.astro";
   <Nav />
   <section class="con">
     <div class="flex">
-      <h1>Tak for din støtte</h1>
+      <h1>Tak for din støtte!</h1>
     </div>
     <div class="img_con">
       <img src="../assets/icons/hjerte.svg" alt="Hjerte" />
@@ -18,11 +18,10 @@ import Nav from "../components/Nav.astro";
 <style>
   .con {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    text-align: center;
-    justify-content: space-around;
-    gap: 20px;
+    flex-direction: column;
+    padding: 10%;
   }
 
   .img_con {
@@ -34,5 +33,6 @@ import Nav from "../components/Nav.astro";
   }
   h1 {
     color: var(--black);
+    text-align: center;
   }
 </style>
