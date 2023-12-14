@@ -1,11 +1,11 @@
 ---
-const { text, procent, icon } = Astro.props;
+const { text, procent, icon, ringp } = Astro.props;
 ---
 
 <section class="con">
   <p class="highlight">{procent}</p>
   <p>{text}</p>
-  <div class="ring">
+  <div class="ring" id={ringp}>
     <div class="icon_ring">
       <img src={icon} alt="" />
     </div>
@@ -31,13 +31,6 @@ const { text, procent, icon } = Astro.props;
     align-items: center;
     justify-content: center;
     filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
-
-    background: conic-gradient(
-      var(--red100) var(--percentage),
-      var(--grey100) 0
-    );
-    border-radius: 50%;
-    animation: timer 4s 1 ease-in-out forwards;
   }
 
   .icon_ring {
@@ -69,9 +62,76 @@ const { text, procent, icon } = Astro.props;
     syntax: "<percentage>";
   }
 
-  @keyframes timer {
+  #p70,
+  #p40,
+  #p32,
+  #p22,
+  #p14,
+  #p8 {
+    background: conic-gradient(
+      var(--red100) var(--percentage),
+      var(--grey100) 0
+    );
+    border-radius: 50%;
+  }
+
+  #p70 {
+    animation: p70 2s 1 ease-in-out forwards;
+  }
+
+  #p40 {
+    animation: p40 2s 1 ease-in-out forwards;
+  }
+
+  #p32 {
+    animation: p32 2s 1 ease-in-out forwards;
+  }
+
+  #p22 {
+    animation: p22 2s 1 ease-in-out forwards;
+  }
+
+  #p14 {
+    animation: p14 2s 1 ease-in-out forwards;
+  }
+
+  #p8 {
+    animation: p8 2s 1 ease-in-out forwards;
+  }
+
+  @keyframes p70 {
+    to {
+      --percentage: 70%;
+    }
+  }
+
+  @keyframes p40 {
+    to {
+      --percentage: 40%;
+    }
+  }
+
+  @keyframes p32 {
+    to {
+      --percentage: 32%;
+    }
+  }
+
+  @keyframes p22 {
+    to {
+      --percentage: 22%;
+    }
+  }
+
+  @keyframes p14 {
     to {
       --percentage: 14%;
+    }
+  }
+
+  @keyframes p8 {
+    to {
+      --percentage: 8%;
     }
   }
 </style>
