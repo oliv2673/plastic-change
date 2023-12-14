@@ -36,4 +36,12 @@ const { title, link, type } = Astro.props;
     color: var(--grey400);
     border: 3px solid var(--grey400);
   }
+
+  @media (max-width: 800px) {
+    h4 {
+    padding: 0.6rem 1rem;
+    border-radius: 1.875rem;
+    white-space: nowrap;
+  }
+  }
 </style>
