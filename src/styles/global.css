@@ -78,3 +78,41 @@ p {
   color: var(--red100);
   font-size: 2.75rem;
 }
+
+/***** mobile verison ****/
+
+@media (max-width: 800px) {
+  h1 {
+    font-family: campton-bold;
+    font-size: 3rem;
+    color: var(--white);
+  }
+
+  h2 {
+    font-family: campton-bold;
+    font-size: 2rem;
+  }
+
+  h3 {
+    font-family: campton-semibold;
+    font-size: 1.4rem;
+  }
+
+  h4 {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.2rem;
+    font-weight: var(--medium);
+  }
+
+  p {
+    font-family: "Rubik", sans-serif;
+    font-size: 1.1rem;
+    font-weight: 400;
+    color: var(--grey500);
+  }
+
+  .highlight {
+    color: var(--red100);
+    font-size: 2rem;
+  }
+}
