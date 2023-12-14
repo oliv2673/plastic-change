@@ -46,10 +46,20 @@ const { mode } = Astro.props;
     border: 1px solid var(--grey500);
     max-width: 450px;
   }
+  /*
 
   input:focus {
     outline: none;
   }
+  */
+  input[type=text], select { 
+        width: 100%;
+        padding: 12px 20px;
+        margin: 8px 0;
+        display: inline-block;
+        border: 1px solid var(--grey500);
+        border-radius: 4px;
+        box-sizing: border-box;}
 
   form {
     display: flex;
