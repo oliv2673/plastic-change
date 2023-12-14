@@ -5,10 +5,34 @@ import Nav from "../components/Nav.astro";
 
 <BaseLayout>
   <Nav />
-  <section>
-    <h1>Tak for din støtte</h1>
-    <img src="../assets/hjerte.svg" alt="Hjerte" />
+  <section class="con">
+    <div class="flex">
+      <h1>Tak for din støtte</h1>
+    </div>
+    <div class="img_con">
+      <img src="../assets/icons/hjerte.svg" alt="Hjerte" />
+    </div>
   </section>
 </BaseLayout>
 
-<style></style>
+<style>
+  .con {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: space-around;
+    gap: 20px;
+  }
+
+  .img_con {
+    width: 150px;
+  }
+
+  img {
+    width: 100%;
+  }
+  h1 {
+    color: var(--black);
+  }
+</style>
