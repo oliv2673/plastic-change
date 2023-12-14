@@ -2,7 +2,7 @@
 ---
 
 <section style="display: flex; justify-content: space-between;">
-  <div style="max-width: 48%">
+  <div>
     <h3>Vi bruger dit bidrag med omtanke</h3>
     <p>
       Din støtte går primært til hav- og miljøindsatser, der fokuserer på at reducere plastforurening både nationalt og internationalt. Dette opnås gennem oplysning, vidensdeling, events, undervisning og foredrag for at mobilisere en voksende Plastic
@@ -12,7 +12,7 @@
     </p>
   </div>
 
-  <div style="max-width: 48%">
+  <div class="img_con">
     <img src="../assets/img/plasticchangerunivers13.webp" alt="Plastic changer" />
   </div>
 </section>
@@ -22,11 +22,29 @@
     background-color: var(--grey100);
     padding-block: var(--padding-sections);
     padding-inline: 5rem;
+    gap: 2rem;;
 
   }
   div {
     display: flex;
     flex-direction: column;
     gap: 20px;
+  }
+  .img_con {
+    max-width: 48%;
+  }
+
+  @media (max-width: 800px) {
+    section {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding-inline: var(--mobile-padding-inline);
+  }
+  .img_con {
+    max-width: 108%;
+  }
+
+    
   }
 </style>
