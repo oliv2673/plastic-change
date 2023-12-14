@@ -7,7 +7,7 @@ const { overskrift, valg} = Astro.props;
 
 
 <section>
-    <h3>{overskrift}</h3>
+    <h2>{overskrift}</h2>
     <p>{valg}</p>          
       <div class="form_con">
         <div class="form_buttons">
@@ -21,19 +21,20 @@ const { overskrift, valg} = Astro.props;
         
         <form class="form_con" action="">
             <label for="name"></label><input type="text" placeholder="Andet beløb" />
-            <div class="radio-toolbar">
-                <h3 class="betal_overskrift">Betalingsform</h3>
-            <input type="radio" name="betaling" id="mobilepay" required="required"><label class="small" for="mobile">Mobilepay </label> <br>
-            <input type="radio" name="betaling" id="kort" required="required"><label class="small" for="kort">Betalingskort</label><br></div>
+        <div class="radio-toolbar">
+            <h3 class="betal_overskrift">Betalingsform</h3>
+            <div class="radio_indhold"><input type="radio" name="betaling" id="mobilepay" required="required"><label class="small" for="mobile">Mobilepay </label> <br></div>
+            <div class="radio_indhold"><input type="radio" name="betaling" id="kort" required="required"><label class="small" for="kort">Betalingskort</label><br></div>
+        </div>
 
 
-            <div class="input-con"><label for="name">Fornavn<span>*</span></label><input type="text" /></div>
-            <div class="input-con"><label for="lname">Efternavn<span>*</span></label><input type="text" /></div>
-            <div class="input-con"><label for="mail">Email<span>*</span></label><input type="text"/></div>
-            <div class="input-con"><label for="phone">Telefon</label><input type="text"/></div>
-            <div class="input-con"><label for="postalcode">Postnr.</label><input type="text"></div>
-            <div class="mellemrum"><input type="checkbox" name="fradrag" id="fradrag"><label class="small" for="fradrag">Jeg ønsker fradrag fra SKAT</label></div>
-            <div class="mellemrum"><input type="radio" name="betaling" id="mobilepay" required="required"><label class="detmedsmaat" for="mobile">Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores <span><a href="http://www.google.com">privatlivspolitik.</a></span> </label></div>
+        <div class="input-con"><label for="name">Fornavn<span>*</span></label><input type="text" /></div>
+        <div class="input-con"><label for="lname">Efternavn<span>*</span></label><input type="text" /></div>
+        <div class="input-con"><label for="mail">Email<span>*</span></label><input type="text"/></div>
+        <div class="input-con"><label for="phone">Telefon</label><input type="text"/></div>
+        <div class="input-con"><label for="postalcode">Postnr.</label><input type="text"></div>
+        <div class="mellemrum"><input type="checkbox" name="fradrag" id="fradrag"><label id="skat" class="small" for="fradrag">Jeg ønsker fradrag fra SKAT</label></div>
+        <div class="mellemrum"><input type="checkbox" name="samtykke" id="samtykke" required="required"><label class="detmedsmaat" for="mobile">Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores <span><a href="http://www.google.com">privatlivspolitik.</a></span> </label></div>
             
         </form>
 
@@ -52,9 +53,9 @@ const { overskrift, valg} = Astro.props;
     }
     
     
-    .mellemrum, .form_buttons  {
+    .mellemrum, .form_buttons {
         flex-direction: row;
-        gap: 1rem;
+    
         padding-top: 1.5rem;
     }
 
@@ -66,6 +67,14 @@ const { overskrift, valg} = Astro.props;
     .radio-toolbar .small{
         padding-bottom: 1.5rem;
     }
+
+    .radio-toolbar  {
+        display: flex;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+   
+
     section {
         padding: 3rem;
         background-color: var(--grey100);
@@ -96,15 +105,16 @@ const { overskrift, valg} = Astro.props;
 
     .small {
         font-family: "Rubik", sans-serif;
-        font-size: 1.4375rem;
+        font-size: 1.1rem;
         font-weight: 400;
         color: var(--grey500);
+        padding-left: 0.5rem;
 
     }
 
     .detmedsmaat {
         font-family: "Rubik", sans-serif;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         font-weight: 400;
         color: var(--grey500);
 
@@ -115,6 +125,10 @@ const { overskrift, valg} = Astro.props;
     }
     a:hover {
         text-decoration: underline;
+    }
+
+    #skat {
+        padding-left: 0rem;
     }
     
 </style>

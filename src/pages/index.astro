@@ -12,10 +12,13 @@ import Hjerte from "../components/Hjerte.astro";
 <BaseLayout title="Plastic Change">
   <Nav />
   <Hjerte mode="fixed" />
+  <video loop autoplay muted>
+    <source src="../assets/video/plastik_suppe.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
   <main>
     <a href="/stoet2">LINK til stoet2</a>
     <section class="hero_con">
-      <video src="../assets/video/plastik_suppe.mp4"></video>
       <div class="text_hero_con">
         <div class="hero_background">
           <h3>
@@ -151,7 +154,7 @@ import Hjerte from "../components/Hjerte.astro";
   }
 
   .hero_background {
-    width: 730px;
+    width: 570px;
   }
 
   .hero_con {
@@ -160,7 +163,8 @@ import Hjerte from "../components/Hjerte.astro";
 
   video {
     position: fixed;
-    max-width: 1200px;
+    max-width: 100%;
     z-index: -999;
+    top:0;
   }
 </style>
