@@ -48,11 +48,6 @@ import Hjerte from "../components/Hjerte.astro";
       </div>
     </section>
   </main>
-  <Info
-    procent="40%"
-    text="Bortskaffes på losseplads"
-    icon="../assets/icons/losseplads.svg"
-  />
   <section class="icons"></section>
   <Ikoner
     overskrift="Hvad er problemet med plastik?"
@@ -67,6 +62,33 @@ import Hjerte from "../components/Hjerte.astro";
     text3="Plastik er lavet af olie og indeholder skadelige kemikalier"
     hide="not_visible"
   />
+  <section class="info_con">
+    <h2>Hvor ender plastemballagen</h2>
+    <div class="con_1">
+      <Info
+        procent="40%"
+        text="Bortskaffes på losseplads"
+        icon="../assets/icons/losseplads.svg"
+      />
+      <Info
+        procent="14%"
+        text="Genanvendt"
+        icon="../assets/icons/genanvendelse.svg"
+      />
+    </div>
+    <div class="con_1">
+      <Info
+        procent="14%"
+        text="Ender i miljøet"
+        icon="../assets/icons/miljoe.svg"
+      />
+      <Info
+        procent="32%"
+        text="Brændt i forbrændingsanlæg"
+        icon="../assets/icons/forbraending.svg"
+      />
+    </div>
+  </section>
   <section class="singleuse_section">
     <img
       src="../assets/img/svane.webp"
@@ -103,6 +125,27 @@ import Hjerte from "../components/Hjerte.astro";
   main {
     max-width: 1200px;
     margin-inline: auto;
+  }
+
+  /**** info sektion ****/
+
+  .info_con {
+    background-color: var(--grey100);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-block: var(--padding-sections);
+    gap: 50px;
+  }
+
+  .info_con h2 {
+    text-align: center;
+  }
+
+  .con_1 {
+    display: flex;
+    gap: 100px;
   }
 
   /**** Single Use sektion ****/
