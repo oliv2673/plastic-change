@@ -43,9 +43,7 @@ import Cta from "./Cta.astro";
     header {
       height: 60px;
     }
-    .hide {
-      display: none;
-    }
+    
 
     a {
     font-family: campton-semibold;
@@ -59,11 +57,14 @@ import Cta from "./Cta.astro";
   .con, a {
     padding: 10px;
   }
-  
-
-
   }
 
+  @media (max-width: 400px) {
+
+  .hide {
+      display: none;
+    }
+  }
 
 
 
