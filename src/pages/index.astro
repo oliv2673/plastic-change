@@ -11,13 +11,13 @@ import Hjerte from "../components/Hjerte.astro";
 
 <BaseLayout title="Plastic Change">
   <Nav />
-  <Hjerte mode="fixed"/>
+  <Hjerte mode="fixed" />
   <video loop autoplay muted>
     <source src="../assets/video/plastik_suppe.mp4" type="video/mp4" />
      Your browser does not support the video tag.
   </video>
   <main>
-    <a href="/stoet2">LINK til stoet2</a>
+    <a href="/stoet2" class="gsaptest">LINK til stoet2</a>
     <section class="hero_con">
       <div class="text_hero_con">
         <div class="hero_background">
@@ -220,3 +220,15 @@ import Hjerte from "../components/Hjerte.astro";
     top: 0;
   }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.to(".gsaptest", {
+    color: "#ff9900",
+    duration: 5,
+  });
+</script>
