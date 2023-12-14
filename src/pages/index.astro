@@ -48,7 +48,7 @@ import Hjerte from "../components/Hjerte.astro";
       </div>
     </section>
   </main>
-  <section class="icons"></section>
+  <section class="icons">
   <Ikoner
     overskrift="Hvad er problemet med plastik?"
     svg1="../assets/icons/plastikflaske.svg"
@@ -62,6 +62,7 @@ import Hjerte from "../components/Hjerte.astro";
     text3="Plastik er lavet af olie og indeholder skadelige kemikalier"
     hide="not_visible"
   />
+</section>
   <section class="info_con">
     <h2>Hvor ender plastemballagen</h2>
     <div class="con_1">
@@ -139,7 +140,6 @@ import Hjerte from "../components/Hjerte.astro";
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-block: var(--padding-sections);
     gap: 50px;
   }
 
@@ -218,5 +218,27 @@ import Hjerte from "../components/Hjerte.astro";
     max-width: 100%;
     z-index: -999;
     top: 0;
+  }
+
+  /*** Icons ***/
+
+  .icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  @media (max-width: 800px) {
+  .con_1 {
+    gap: 100px;
+    flex-direction: column;
+    padding-inline: var(--mobile-padding-inline);
+  }
+
+  .info_con, .icons {
+    padding-inline: var(--padding-sections);
+  }
+
   }
 </style>

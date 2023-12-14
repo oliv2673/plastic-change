@@ -4,7 +4,7 @@ const { mode } = Astro.props;
 ---
 
 <section class={mode}>
-  <div class="col">
+  <div class="con">
     <h2>Tilmeld dig vores nyhedsbrev her</h2>
     <p>
       Følg med i vores arbejde mod plastikforurening, og bliv opdateret med de
@@ -46,12 +46,7 @@ const { mode } = Astro.props;
     border: 1px solid var(--grey500);
     max-width: 450px;
   }
-  /*
 
-  input:focus {
-    outline: none;
-  }
-  */
   input[type=text], select { 
         width: 100%;
         padding: 12px 20px;
@@ -72,4 +67,22 @@ const { mode } = Astro.props;
   p {
     text-align: center;
   }
+
+  /***** Mobile ******/
+  @media (max-width: 800px) {
+    .con {
+      display: flex;
+      flex-direction: column;
+      padding-inline: var(--mobile-padding-inline);
+      gap: 10px;
+    }
+
+    form {
+      margin:0;
+      padding-inline: var(--mobile-padding-inline);
+    }
+    
+  }
+
+
 </style>

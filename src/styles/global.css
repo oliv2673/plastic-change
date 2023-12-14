@@ -38,6 +38,7 @@
 
   /*padding*/
   --padding-sections: 7rem;
+  --mobile-padding-inline: 2rem;
 }
 
 * {
