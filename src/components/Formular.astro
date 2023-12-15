@@ -41,8 +41,10 @@ const { overskrift, valg, hide, hide2, center} = Astro.props;
         <div class={hide} class="mellemrum"><input type="checkbox" name="samtykke" id="samtykke" required="required"><label class="detmedsmaat" for="mobile">Jeg giver mit samtykke til, at Plastic Change må opbevare og behandle mine oplysninger til brug i forbindelse med min støtte. Læs mere om dette samtykke i vores <span><a href="">privatlivspolitik.</a></span> </label></div>
             
         </form>
+        <div class={hide2} class="knap_con">
+            <Cta title="Støt" link="/stoet2" type="solid" /></div>
 
-        <div class="knap_con">
+        <div class={hide} class="knap_con">
         <Cta title="Støt" link="/tak" type="solid" /></div>
     </div>
 </section>
