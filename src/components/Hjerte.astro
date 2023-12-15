@@ -56,4 +56,12 @@ const { mode } = Astro.props;
       transform: scale(1);
     }
   }
+
+  @media (max-width: 800px) {
+    #fixed {
+      margin: 0 auto;
+      left: 0;
+      right: 0;
+    }
+  }
 </style>
