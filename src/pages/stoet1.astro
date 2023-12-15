@@ -14,58 +14,35 @@ import Formular from "../components/Formular.astro";
 <Nav />
 <section class="formular">
   <div class="forms">
-  <Formular
-  overskrift="Støt os her"
-  valg="Vælg dit beløb i DKK"
-  hide="not_visible"
-  center="center"
-  >
+    <Formular overskrift="Støt os her" valg="Vælg dit beløb i DKK" hide="not_visible" center="center" />
   </div>
-  
+  <Citat />
+  <Ikoner
+    overskrift="Din støtte går blandt andet til at:"
+    svg1="../assets/icons/havogmiljoe.svg"
+    alt1="hav og miljøet"
+    svg2="../assets/icons/fodaftryk.svg"
+    alt2="klima aftryk"
+    svg3="../assets/icons/jordklodespirre.svg"
+    alt3="jordens resourcer"
+    svg4="../assets/icons/kemikalier.svg"
+    alt4="skadelige kemikalier"
+    text1="Beskytte naturen og havet mod plastikforurening"
+    text2="Mindske klimaaftryk"
+    text3="Skåne Jordens ressourcer"
+    text4="Beskytte folkesundheden mod skadelig kemi"
+  />
+  <section class="omtanke">
+    <Omtanke />
+    <div class="info_con">
+      <Info procent="70%" ringp="p70" text="Hav- og miljøindsatser" icon="../assets/icons/verden.svg" />
+      <Info procent="22%" ringp="p22" text="Fundraising og indsamlinger" icon="../assets/icons/fundraiser.svg" />
+      <Info procent="8%" ringp="p8" text="Projektstyring og administration" icon="../assets/icons/administration.svg" />
+    </div>
   </section>
-<Citat />
-<Ikoner
-  overskrift="Din støtte går blandt andet til at:"
-  svg1="../assets/icons/havogmiljoe.svg"
-  alt1="hav og miljøet"
-  svg2="../assets/icons/fodaftryk.svg"
-  alt2="klima aftryk"
-  svg3="../assets/icons/jordklodespirre.svg"
-  alt3="jordens resourcer"
-  svg4="../assets/icons/kemikalier.svg"
-  alt4="skadelige kemikalier"
-  text1="Beskytte naturen og havet mod plastikforurening"
-  text2="Mindske klimaaftryk"
-  text3="Skåne Jordens ressourcer"
-  text4="Beskytte folkesundheden mod skadelig kemi"
-/>
-<section class="omtanke">
-  <Omtanke />
-  <div class="info_con">
-    <Info
-      procent="70%"
-      ringp="p70"
-      text="Hav- og miljøindsatser"
-      icon="../assets/icons/verden.svg"
-    />
-    <Info
-      procent="22%"
-      ringp="p22"
-      text="Fundraising og indsamlinger"
-      icon="../assets/icons/fundraiser.svg"
-    />
-    <Info
-      procent="8%"
-      ringp="p8"
-      text="Projektstyring og administration"
-      icon="../assets/icons/administration.svg"
-    />
-  </div>
+  <SoMe mode="light" />
+  <Nyhedsbrev mode="dark" />
 </section>
-<SoMe mode="light" />
-<Nyhedsbrev mode="dark" />
-
-
 <style>
   .omtanke {
     padding-block: var(--padding-sections);
@@ -79,20 +56,27 @@ import Formular from "../components/Formular.astro";
     max-width: 1200px;
     margin-inline: auto;
   }
-    .formular {
-        background-image: url("../assets/img/stoet1foto.webp");
-        height: 100vh;
-        width: 100%;
-        max-width: 100%;
-        background-size: cover;
-        background-position: center 10%;
-        align-items: center;
-    }
+  .formular {
+    background-image: url("../assets/img/stoet1foto.webp");
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center 10%;
+    align-items: center;
+  }
 
-    .forms {
-        display: flex;
-        justify-content: center;
-        padding-block: 100px;
+  .forms {
+    display: flex;
+    justify-content: center;
+    padding-block: 100px;
+  }
 
+  @media (max-width: 800px) {
+    .info_con {
+      gap: 100px;
+      flex-direction: column;
+      padding-inline: var(--padding-sections);
     }
+  }
 </style>
