@@ -66,8 +66,8 @@ h2 {
 
 .svg_con {
     padding-block: 20px;
+    flex-direction: row;
 }
-
 #not_visible {
     display: none;
 }
@@ -77,10 +77,28 @@ h2 {
 }
 
 /*** web ***/
-@media (min-width: 800px) {
+
+/**Tablet **/
+@media (max-width: 1050px) {
 .svg_con {
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
+.text {
+    max-width: 500px;
+}
+
+@media (max-width: 800px) {
+    .svg_con {
+        display: flex;
+        flex-direction: column;
+        
+    }
+    .text {
+    max-width: 400px;
+}
+
+
 
 }
 
