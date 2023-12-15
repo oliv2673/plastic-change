@@ -262,13 +262,36 @@ import Hjerte from "../components/Hjerte.astro";
     .icons {
       padding-inline: var(--padding-sections);
     }
-    .hero_con{
+    .hero_con, .text_con{
       width: 95%;
       margin-inline: auto;
     }
-    .hero_background {
+    .hero_background, .background {
     width: fit-content;
+
   }
+  /**Single Use sektion ****/
+  .right {
+    /*klasse til h3 så den er til højre*/
+   
+
+  }
+  .text_con {
+    /*store div til hele teksten*/
+    gap: 20px;
+    padding-top: 2rem;
+  }
+  .background {
+    /*div til hver enkelt textbox*/
+    
+  }
+  .stor_overskrift {
+    /*størrelse til h3 så den ligner en overskrift*/
+    font-family: campton-bold;
+    font-size: 3rem;
+
+  }
+
  
   }
   @media (max-width: 600px) { 
