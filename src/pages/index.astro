@@ -49,20 +49,20 @@ import Hjerte from "../components/Hjerte.astro";
     </section>
   </main>
   <section class="icons">
-  <Ikoner
-    overskrift="Hvad er problemet med plastik?"
-    svg1="../assets/icons/plastikflaske.svg"
-    alt1="plastikflaske"
-    svg2="../assets/icons/havogmiljoe.svg"
-    alt2="miljøet og dyrelivet"
-    svg3="../assets/icons/kemikalier.svg"
-    alt3="skadelige kemikalier"
-    text1="Sollys og saltvand bryder plastikken op i mindre dele, og bliver til mikroplast"
-    text2="Mikroplasten truer havmiljøet, og kommer ind i fødekæden"
-    text3="Plastik er lavet af olie og indeholder skadelige kemikalier"
-    hide="not_visible"
-  />
-</section>
+    <Ikoner
+      overskrift="Hvad er problemet med plastik?"
+      svg1="../assets/icons/plastikflaske.svg"
+      alt1="plastikflaske"
+      svg2="../assets/icons/havogmiljoe.svg"
+      alt2="miljøet og dyrelivet"
+      svg3="../assets/icons/kemikalier.svg"
+      alt3="skadelige kemikalier"
+      text1="Sollys og saltvand bryder plastikken op i mindre dele, og bliver til mikroplast"
+      text2="Mikroplasten truer havmiljøet, og kommer ind i fødekæden"
+      text3="Plastik er lavet af olie og indeholder skadelige kemikalier"
+      hide="not_visible"
+    />
+  </section>
   <section class="info_con">
     <h2>Hvor ender plastemballagen</h2>
     <div class="con_1">
@@ -141,7 +141,7 @@ import Hjerte from "../components/Hjerte.astro";
     align-items: center;
     justify-content: center;
     gap: 50px;
-    padding-block: var(--padding-sections) ;
+    padding-block: var(--padding-sections);
   }
 
   .info_con h2 {
@@ -231,20 +231,18 @@ import Hjerte from "../components/Hjerte.astro";
   }
   /*****mobile view **********/
   @media (max-width: 800px) {
-  .con_1 {
-    gap: 100px;
-    flex-direction: column;
-    padding-inline: var(--mobile-padding-inline);
-  }
+    .con_1 {
+      gap: 70px;
+      flex-direction: column;
+      padding-inline: var(--mobile-padding-inline);
+    }
 
-  .info_con, .icons {
-    padding-inline: var(--padding-sections);
-  }
-
+    .info_con,
+    .icons {
+      padding-inline: var(--padding-sections);
+    }
   }
 </style>
-
-
 
 <script>
   import { gsap } from "gsap";
