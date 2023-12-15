@@ -2,7 +2,7 @@
 import Cta from "../components/Cta.astro";
 import Prisknap from "../components/Prisknap.astro";
 
-const { overskrift, valg, hide, hide2, center} = Astro.props;
+const { overskrift, valg, hide, hide2, center, tal1, tal2, tal3} = Astro.props;
 ---
 
 
@@ -15,12 +15,9 @@ const { overskrift, valg, hide, hide2, center} = Astro.props;
             <div class="iteration_indhold"><input type="radio" name="iterationer" id="engangs" required="required"><label class="small" for="kort">Én gang</label></div>
         </div>
         <div class={center} class="form_buttons">
-            <Prisknap
-            tal="50"/>
-            <Prisknap
-            tal="75"/>
-            <Prisknap
-            tal="125"/>
+            <button class="knap">{tal1}</button>
+            <button class="knap">{tal2}</button>
+            <button class="knap">{tal3}</button>            
         </div>
         
         <form class="form_con" action="">
@@ -48,6 +45,32 @@ const { overskrift, valg, hide, hide2, center} = Astro.props;
         <Cta title="Støt" link="/tak" type="solid" /></div>
     </div>
 </section>
+
+
+<script>
+    window.addEventListener("load", sidenVises);
+
+function sidenVises() {
+  console.log("sidenVises");
+  // Tilføj click event til alle knapper med klassen knap
+  document.querySelectorAll(".knap").forEach(function (btn) {
+    btn.addEventListener("click", klick);
+  });
+}
+
+function klick() {
+  console.log("click");
+
+  // fjern "clicked" class fra alle knapper
+  document.querySelectorAll(".knap").forEach(function (btn) {
+    btn.classList.remove("clicked");
+  });
+
+  // tilføj "clicked" class til knappen
+  this.classList.add("clicked");
+}
+</script>
+
 
 <style>
     
@@ -155,4 +178,35 @@ const { overskrift, valg, hide, hide2, center} = Astro.props;
     h2 {
         padding-bottom: 1rem;
     }
+
+    /**Pris knap */
+    button {
+  background-color:var(--white);
+  color: var(--grey500);
+  border: 1px solid var(--grey500);
+  border-radius: 50%;  
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  width: 5rem;
+  height: 5rem;
+}
+
+button:hover {
+    color: var(--white);
+    background-color: var(--red100);
+    border: 1.5px solid var(--red100);
+  }
+
+  button.clicked{
+    color: var(--white);
+    background-color: var(--red500);
+    border: 1.5px solid var(--red500);
+  }
+  .knap {
+  font-family: "Rubik", sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  color: var(--grey500);
+}
 </style>
