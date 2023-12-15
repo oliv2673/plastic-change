@@ -19,6 +19,9 @@ import Hjerte from "../components/Hjerte.astro";
   <main>
     <section class="hero_con">
       <div class="text_hero_con">
+        <div class="kampagnenavn">
+          <h1>Single use sucks</h1>
+        </div>
         <div class="hero_background">
           <h3>
             <span class="highlight">Plastic Change</span> kæmper for en <br
@@ -101,7 +104,7 @@ import Hjerte from "../components/Hjerte.astro";
     <div class="con_absolute">
       <div class="text_con">
         <div class="background">
-          <h1 class="right">Single Use Sucks</h1>
+          <h3 class="stor_overskrift" class="right">Single Use Sucks</h3>
         </div>
         <div class="background">
           <h3 class="right">
@@ -166,6 +169,7 @@ import Hjerte from "../components/Hjerte.astro";
   .hero_background {
     background-color: var(--black70);
     padding-inline: 20px;
+    padding-block: 10px;
   }
 
   .background {
@@ -223,6 +227,20 @@ import Hjerte from "../components/Hjerte.astro";
     top: 0;
   }
 
+  .kampagnenavn {
+    width: auto;
+    background-color: var(--black70);
+    padding-inline: 20px;
+    text-transform:capitalize;
+    padding-block: 10px;
+
+  }
+  .stor_overskrift {
+    font-family: campton-bold;
+  font-size: 5rem;
+  color: var(--white);
+}
+
   /*** Icons ***/
 
   .icons {
@@ -231,6 +249,7 @@ import Hjerte from "../components/Hjerte.astro";
     align-items: center;
     background-color: var(--white);
   }
+
   /*****mobile view **********/
   @media (max-width: 800px) {
     .con_1 {
