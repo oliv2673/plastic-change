@@ -14,17 +14,15 @@ import Formular from "../components/Formular.astro";
 <Nav />
 <section class="formular">
   <div class="forms">
-    <Formular
-      overskrift="Støt os her"
-      valg="Vælg dit beløb i DKK"
-      hide="not_visible"
-      center="center"
-      tal1="50"
-      tal2="75"
-      tal3="125"
-    />
+  <Formular
+  overskrift="Støt os her"
+  valg="Vælg dit beløb i DKK"
+  hide="not_visible"
+  center="center"
+  >
   </div>
-</section>
+  
+  </section>
 <Citat />
 <Ikoner
   overskrift="Din støtte går blandt andet til at:"
@@ -41,7 +39,6 @@ import Formular from "../components/Formular.astro";
   text3="Skåne Jordens ressourcer"
   text4="Beskytte folkesundheden mod skadelig kemi"
 />
-
 <section class="omtanke">
   <Omtanke />
   <div class="info_con">
@@ -68,6 +65,7 @@ import Formular from "../components/Formular.astro";
 <SoMe mode="light" />
 <Nyhedsbrev mode="dark" />
 
+
 <style>
   .omtanke {
     padding-block: var(--padding-sections);
@@ -81,27 +79,23 @@ import Formular from "../components/Formular.astro";
     max-width: 1200px;
     margin-inline: auto;
   }
-  .formular {
-    background-image: url("../assets/img/stoet1foto.webp");
-    height: 100vh;
-    width: 100%;
-    max-width: 100%;
-    background-size: cover;
-    background-position: center 10%;
-    align-items: center;
-  }
+    .formular {
+        background-image: url("../assets/img/stoet1foto.webp");
+        height: 100vh;
+        width: 100%;
+        max-width: 100%;
+        background-size: cover;
+        background-position: center 10%;
+        align-items: center;
+    }
 
-  .forms {
-    display: flex;
-    justify-content: center;
-    padding-block: var(--padding-sections);
-  }
-  section {
-    display: flex;
-    flex-direction: column;
-  }
+    .forms {
+        display: flex;
+        justify-content: center;
+        padding-block: 100px;
 
-  @media (max-width: 800px) {
+    }
+    @media (max-width: 800px) {
     .info_con {
       gap: 100px;
       flex-direction: column;
