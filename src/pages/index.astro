@@ -27,20 +27,20 @@ import Hjerte from "../components/Hjerte.astro";
         </div>
         <div class="hero_background">
           <h3>
-            Plastik forsager sygdom, handicap og for<br /><span
+            Plastik forsager sygdom, handicap og for <br /><span
               class="highlight">tidlig død</span
             >
           </h3>
         </div>
         <div class="hero_background">
           <h3>
-            Vi udleder i dag <span class="highlight">8-10 mio. ton<br /></span
+            Vi udleder i dag <span class="highlight">8-10 mio. ton <br /></span
             >plastik til havet om året.
           </h3>
         </div>
         <div class="hero_background">
           <h3>
-            Det svarer til <span class="highlight">1 lastbil</span> med plastik<br
+            Det svarer til <span class="highlight">1 lastbil</span> med plastik <br
             /><span class="highlight">hvert minut.</span>
           </h3>
         </div>
@@ -243,6 +243,21 @@ import Hjerte from "../components/Hjerte.astro";
     .icons {
       padding-inline: var(--padding-sections);
     }
+    .hero_con{
+      width: 95%;
+      margin-inline: auto;
+    }
+    .hero_background {
+    width: fit-content;
+  }
+ 
+  }
+  @media (max-width: 600px) { 
+    br {
+        display: none;
+    }
+
+
   }
 </style>
 
