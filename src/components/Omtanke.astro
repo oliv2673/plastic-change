@@ -5,19 +5,22 @@
 <section style="display: flex; justify-content: space-between;">
   <div>
     <h3>Vi bruger dit bidrag med omtanke</h3>
-    <p>
-      Din støtte går primært til hav- og miljøindsatser, der fokuserer på at
-      reducere plastforurening både nationalt og internationalt. Dette opnås
-      gennem oplysning, vidensdeling, events, undervisning og foredrag for at
-      mobilisere en voksende Plastic Changer-bevægelse.
-    </p>
-    <p>
-      Vi leder også årlige naturrydninger i samarbejde med globale
-      organisationer. En del af din støtte anvendes til at påvirke politisk
-      beslutningstagning for at styrke miljølovgivningen til beskyttelse af
-      kloden. En mindre del støtter fundraising for at sikre bevægelsens vækst,
-      og en anden del går til administration og faciliteter for Plastic Change.
-    </p>
+    <div class="omtanke_con">
+      <p>
+        Din støtte går primært til hav- og miljøindsatser, der fokuserer på at
+        reducere plastforurening både nationalt og internationalt. Dette opnås
+        gennem oplysning, vidensdeling, events, undervisning og foredrag for at
+        mobilisere en voksende Plastic Changer-bevægelse.
+      </p>
+      <p>
+        Vi leder også årlige naturrydninger i samarbejde med globale
+        organisationer. En del af din støtte anvendes til at påvirke politisk
+        beslutningstagning for at styrke miljølovgivningen til beskyttelse af
+        kloden. En mindre del støtter fundraising for at sikre bevægelsens
+        vækst, og en anden del går til administration og faciliteter for Plastic
+        Change.
+      </p>
+    </div>
   </div>
 
   <div class="img_con">
@@ -27,7 +30,34 @@
     />
   </div>
 </section>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
 
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".omtanke_con", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: ".omtanke_con",
+      start: "top 70%",
+      /* markers: true, */
+    },
+  });
+
+  gsap.from(".img_con", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: ".omtanke_con",
+      start: "top 70%",
+      /* markers: true, */
+    },
+  });
+</script>
 <style>
   section {
     background-color: var(--grey100);

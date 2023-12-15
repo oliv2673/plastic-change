@@ -1,29 +1,60 @@
 ---
+
 ---
 
 <section>
-  <div class="con">
+  <div class="gsap_con">
     <h3>Du kan beskytte naturen, dyrelivet og vores børn mod plastik</h3>
+
     <p>
-      Plastikforurening truer livet i havet og på jorden. Hver dag forurenes naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler, skildpadder, delfiner og ender
-      i maver på hvaler, fugle og fisk.</p>
-      <p>Kun med din støtte kan vi kæmpe for, at politikere og virksomheder tager ansvar for at standse overproduktion og forurening fra plastik nu og at vi kan uddanne fremtidens forbrugere. Du bliver en del af en
-      global Plastic Changer bevægelse, der siger: <b>STOP PLASTIKFORURENING NU!</b>
+      Plastikforurening truer livet i havet og på jorden. Hver dag forurenes
+      naturen med tusindvis af plaststykker, som aldrig forsvinder igen. Hvert
+      minut tømmes plastikaffald ud i havet, som vikler sig rundt om sæler,
+      skildpadder, delfiner og ender i maver på hvaler, fugle og fisk.
+    </p>
+    <p>
+      Kun med din støtte kan vi kæmpe for, at politikere og virksomheder tager
+      ansvar for at standse overproduktion og forurening fra plastik nu og at vi
+      kan uddanne fremtidens forbrugere. Du bliver en del af en global Plastic
+      Changer bevægelse, der siger: <b>STOP PLASTIKFORURENING NU!</b>
     </p>
   </div>
 
-  <div class="con">
+  <div class="gsap_con">
     <img src="../assets/icons/citatop.svg" alt="Citat icon" />
-    <p>Forskere har fundet flere store hvaler, der er døde af sult, fordi deres maver er helt fyldt af plastik – og vi ved, at der også findes mikroplast med kemikalier i meget af den mad, vi mennesker spiser.</p>
-    <div class="right_citat"><img src="../assets/icons/citatned.svg" alt="Citat icon" /></div>
-      <div class="citat_con">
+    <p>
+      Forskere har fundet flere store hvaler, der er døde af sult, fordi deres
+      maver er helt fyldt af plastik – og vi ved, at der også findes mikroplast
+      med kemikalier i meget af den mad, vi mennesker spiser.
+    </p>
+    <div class="right_citat">
+      <img src="../assets/icons/citatned.svg" alt="Citat icon" />
+    </div>
+    <div class="citat_con">
       <img class="henrik" src="../assets/img/henrik.webp" alt="henrik" />
       <div class="henrik_info">
-      <p>Henrik Beha Pedersen</p>
-      <p class="grey_text">Miljøbiolog & stifter af Plastic Change</p></div>
+        <p>Henrik Beha Pedersen</p>
+        <p class="grey_text">Miljøbiolog & stifter af Plastic Change</p>
+      </div>
     </div>
   </div>
 </section>
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+  gsap.from(".gsap_con", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: ".gsap_con",
+      start: "top 70%",
+      /* markers: true, */
+    },
+  });
+</script>
 <style>
   section {
     background-color: var(--grey100);
@@ -51,19 +82,17 @@
   }
   .citat_con {
     flex-direction: row;
-
   }
   .henrik_info {
     justify-content: center;
     gap: 10px;
   }
-  
 
   .grey_text {
     color: var(--grey400);
   }
 
-  .right_citat{
+  .right_citat {
     width: 100%;
     justify-content: right;
     flex-direction: initial;
@@ -71,11 +100,10 @@
 
   @media (max-width: 800px) {
     section {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
-    padding-inline: var(--mobile-padding-inline);
-  }
-    
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      padding-inline: var(--mobile-padding-inline);
+    }
   }
 </style>
