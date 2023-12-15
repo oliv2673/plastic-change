@@ -5,41 +5,65 @@ const { mode } = Astro.props;
 
 <section class={mode}>
   <h2>Støt os i kampen mod plastikforurening</h2>
-  <div class="hjerte_con">
-    <Hjerte mode="center" />
-  </div>
-  <p>Dit bidrag går til hav- og miljøindsatser</p>
+  <div class="some_con">
+    <div class="hjerte_con">
+      <Hjerte mode="center" />
+    </div>
+    <p>Dit bidrag går til hav- og miljøindsatser</p>
 
-  <div class="con">
-    <a href="https://www.facebook.com/plasticchange/"
-      ><img src="../assets/icons/facebook.svg" alt="Facebook icon" />
-    </a>
-    <a href="https://www.linkedin.com/company/plastic-change/">
-      <img src="../assets/icons/linkedin.svg" alt="linkedin icon" />
-    </a>
-    <a href="https://twitter.com/plasticchange">
-      <img src="../assets/icons/twitter.svg" alt="Twitter icon" />
-    </a>
-    <a href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g">
-      <img src="../assets/icons/youtube.svg" alt="Youtube icon" />
-    </a>
-    <a href="https://www.instagram.com/plasticchange">
-      <img src="../assets/icons/instagram.svg" alt="Instagram icon" />
-    </a>
+    <div class="con">
+      <a href="https://www.facebook.com/plasticchange/"
+        ><img src="../assets/icons/facebook.svg" alt="Facebook icon" />
+      </a>
+      <a href="https://www.linkedin.com/company/plastic-change/">
+        <img src="../assets/icons/linkedin.svg" alt="linkedin icon" />
+      </a>
+      <a href="https://twitter.com/plasticchange">
+        <img src="../assets/icons/twitter.svg" alt="Twitter icon" />
+      </a>
+      <a href="https://www.youtube.com/channel/UCgLD-akVpdrJPPds2qoNA8g">
+        <img src="../assets/icons/youtube.svg" alt="Youtube icon" />
+      </a>
+      <a href="https://www.instagram.com/plasticchange">
+        <img src="../assets/icons/instagram.svg" alt="Instagram icon" />
+      </a>
+    </div>
+    <p>Følg os her</p>
   </div>
-  <p>Følg os her</p>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".some_con", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: ".some_con",
+      start: "top 70%",
+      /*   markers: true, */
+    },
+  });
+</script>
 <style>
   section {
+    gap: 20px;
+    width: 100%;
+    padding-block: var(--padding-sections);
+  }
+
+  .some_con {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    width: 100%;
     gap: 20px;
-    padding-block: var(--padding-sections);
+    padding-block: 10px;
   }
-
   .con {
     display: flex;
     gap: 15px;
