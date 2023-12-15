@@ -250,8 +250,14 @@ import Hjerte from "../components/Hjerte.astro";
 
   gsap.registerPlugin(ScrollTrigger);
 
-  gsap.to(".gsaptest", {
-    color: "#ff9900",
-    duration: 5,
-  });
+  /*   gsap.from(".icons", {
+    y: 100,
+    opacity: 0,
+    duration: 0.5,
+    scrollTrigger: {
+      trigger: ".icons",
+      start: "top 70%",
+      markers: true,
+    },
+  }); */
 </script>

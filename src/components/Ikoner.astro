@@ -1,38 +1,48 @@
 ---
-const { hide, overskrift, svg1, svg2, svg3, svg4, alt1, alt2, alt3, alt4, text1, text2, text3, text4 } = Astro.props;
-
+const {
+  hide,
+  overskrift,
+  svg1,
+  svg2,
+  svg3,
+  svg4,
+  alt1,
+  alt2,
+  alt3,
+  alt4,
+  text1,
+  text2,
+  text3,
+  text4,
+} = Astro.props;
 ---
 
-
 <section>
-    <div class="text">
-        <h2>{overskrift}</h2>
+  <div class="text">
+    <h2>{overskrift}</h2>
+  </div>
+  <div class="svg_con">
+    <div class="svg">
+      <img src={svg1} alt={alt1} />
+      <p>{text1}</p>
     </div>
-    <div class="svg_con">
-        <div class="svg">
-            <img src={svg1} alt={alt1}>
-            <p>{text1}</p>
-        </div>
-        <div class="svg">
-            <img src={svg2} alt={alt2}>
-            <p>{text2}</p>
-        </div>
-        <div class="svg">
-            <img src={svg3} alt={alt3}>
-            <p>{text3}</p>
-        </div>
-        <div id={hide} class="svg">
-            <img src={svg4} alt={alt4}>
-            <p>{text4}</p>
-        </div>
-        </div>
-
+    <div class="svg">
+      <img src={svg2} alt={alt2} />
+      <p>{text2}</p>
+    </div>
+    <div class="svg">
+      <img src={svg3} alt={alt3} />
+      <p>{text3}</p>
+    </div>
+    <div id={hide} class="svg">
+      <img src={svg4} alt={alt4} />
+      <p>{text4}</p>
+    </div>
+  </div>
 </section>
 
-
 <style>
-
-section {
+  section {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -41,47 +51,62 @@ section {
     gap: 50px;
     width: 100%;
     background-color: var(--white);
+  }
 
-    
-}
-
-.text, .svg, .svg_con {
+  .text,
+  .svg,
+  .svg_con {
     display: flex;
     justify-content: center;
     flex-direction: column;
     gap: 20px;
+  }
 
-}
-
-p {
+  p {
     width: 250px;
     height: 70px;
     text-align: center;
     color: var(--grey500);
-}
+  }
 
-h2 {
+  h2 {
     text-align: center;
-}
+  }
 
-.svg_con {
+  .svg_con {
     padding-block: 20px;
-}
+  }
 
-#not_visible {
+  #not_visible {
     display: none;
-}
+  }
 
-.svg {
+  .svg {
     max-width: 250px;
-}
+  }
 
-/*** web ***/
-@media (min-width: 800px) {
-.svg_con {
-    flex-direction: row;
-}
-
-}
-
+  /*** web ***/
+  @media (min-width: 800px) {
+    .svg_con {
+      flex-direction: row;
+    }
+  }
 </style>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from(".svg_con", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: ".svg_con",
+      start: "top 70%",
+      /*   markers: true, */
+    },
+  });
+</script>

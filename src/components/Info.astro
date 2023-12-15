@@ -2,7 +2,7 @@
 const { text, procent, icon, ringp } = Astro.props;
 ---
 
-<section class="con">
+<section class="con" id="info_con">
   <p class="highlight">{procent}</p>
   <p>{text}</p>
   <div class="ring" id={ringp}>
@@ -11,6 +11,33 @@ const { text, procent, icon, ringp } = Astro.props;
     </div>
   </div>
 </section>
+
+<script>
+  import { gsap } from "gsap";
+  import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  gsap.from("#info_con", {
+    y: 100,
+    opacity: 0,
+    duration: 1.5,
+    scrollTrigger: {
+      trigger: "#info_con",
+      start: "top 70%",
+      /*       markers: true, */
+    },
+  });
+
+  gsap.to(".ring", {
+    scrollTrigger: {
+      trigger: "#info_con",
+      start: "top 70%",
+      markers: true,
+      toggleClass: "run",
+    },
+  });
+</script>
 <style>
   .highlight {
     font-family: "Rubik", sans-serif;
@@ -109,6 +136,14 @@ const { text, procent, icon, ringp } = Astro.props;
 
   #p8 {
     animation: p8 2s 1 ease-in-out forwards;
+  }
+
+  .paused {
+    animation-play-state: paused;
+  }
+
+  .run {
+    animation-play-state: running;
   }
 
   @keyframes p70 {
