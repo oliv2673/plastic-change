@@ -97,11 +97,6 @@ import Hjerte from "../components/Hjerte.astro";
     </div>
   </section>
   <section class="singleuse_section">
-    <img
-      src="../assets/img/svane.webp"
-      alt="en svane som har bygget rede af plastskrald"
-    />
-    <div class="con_absolute">
       <div class="text_con">
         <div class="background">
           <h3 class="stor_overskrift" class="right">Single Use Sucks</h3>
@@ -114,11 +109,10 @@ import Hjerte from "../components/Hjerte.astro";
         </div>
         <div class="background">
           <h3 class="right">
-            Kort sagt.<br /><span class="highlight">Vask og brug igen!</span>
+            Kort sagt.<br /><span class="highlight"> Vask og brug igen!</span>
           </h3>
         </div>
       </div>
-    </div>
   </section>
   <SoMe mode="dark" />
   <Nyhedsbrev mode="light" />
@@ -182,14 +176,15 @@ import Hjerte from "../components/Hjerte.astro";
   }
 
   .singleuse_section {
-    background-color: var(--grey100);
-  }
+    background-image: url(../assets/img/svane.webp);
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center;
+    align-items: center;   
 
-  .con_absolute {
-    position: absolute;
-    top: 20px;
-    right: 10px;
-  }
+}
 
   .text_con {
     display: flex;
@@ -197,6 +192,7 @@ import Hjerte from "../components/Hjerte.astro";
     align-items: flex-end;
     gap: 100px;
     padding-top: 2rem;
+    max-width: 1200px;
   }
 
   /*** Hero ***/
@@ -272,8 +268,8 @@ import Hjerte from "../components/Hjerte.astro";
   }
   /**Single Use sektion ****/
   .right {
-    /*klasse til h3 så den er til højre*/
-   
+    text-align: left;
+
 
   }
   .text_con {
@@ -281,25 +277,31 @@ import Hjerte from "../components/Hjerte.astro";
     gap: 20px;
     padding-top: 2rem;
   }
-  .background {
-    /*div til hver enkelt textbox*/
-    
-  }
+ 
   .stor_overskrift {
     /*størrelse til h3 så den ligner en overskrift*/
     font-family: campton-bold;
     font-size: 3rem;
 
-  }
-
- 
+  } 
   }
   @media (max-width: 600px) { 
     br {
         display: none;
     }
+    .text_con {
+      align-items: center;
+    }
+    .background {
+      max-width: 400px;
+    }
 
+  }
 
+  @media (max-width: 460px) {
+  h1, .stor_overskrift {
+      font-size: 2rem;
+    }
   }
 </style>
 
