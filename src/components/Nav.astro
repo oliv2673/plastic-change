@@ -9,15 +9,22 @@ import Cta from "./Cta.astro";
     <div class="hide"><Cta title="Støt" link="/stoet1" type="solid" /></div>
   </div>
 </header>
+<div class="nav_height"></div>
 
 <style>
+  .nav_height {
+    height: 74px;
+  }
+
   header {
+    position: fixed;
     display: flex;
     align-items: center;
     justify-content: space-between;
     background-color: var(--black);
     width: 100%;
     height: 74px;
+    z-index: 999999999999;
   }
 
   .con {
@@ -39,33 +46,28 @@ import Cta from "./Cta.astro";
   }
 
   @media (max-width: 800px) {
-
     header {
       height: 60px;
     }
-    
 
     a {
-    font-family: campton-semibold;
-    font-size: 1.3rem;
-    color: var(--white);
-    transition: 300ms;
-    text-decoration: none;
-    white-space: nowrap;
-  }
+      font-family: campton-semibold;
+      font-size: 1.3rem;
+      color: var(--white);
+      transition: 300ms;
+      text-decoration: none;
+      white-space: nowrap;
+    }
 
-  .con, a {
-    padding: 10px;
-  }
-  }
-
-  @media (max-width: 400px) {
-
-  .hide {
-      display: none;
+    .con,
+    a {
+      padding: 10px;
     }
   }
 
-
-
+  @media (max-width: 400px) {
+    .hide {
+      display: none;
+    }
+  }
 </style>
