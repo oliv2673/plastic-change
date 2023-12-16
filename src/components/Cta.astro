@@ -1,23 +1,23 @@
 ---
-const { title, link, type } = Astro.props;
+const { title, link, type, color } = Astro.props;
 ---
+<button class={type}><a href={link}><h4 class={color}>{title}</h4></a></button>
 
-<a href={link}><h4 class={type}>{title}</h4></a>
-<style>
+<style>  
+a:link{
+    text-decoration: none;
+  }
   h4 {
     padding: 0.625rem 2.875rem;
     border-radius: 1.875rem;
+    color: var(--white);
   }
-
-  a {
-    display: flex;
-    text-decoration: none;
-  }
-
-  .solid {
+   
+  .solid, .wide, .wide2 {
     color: var(--white);
     background-color: var(--red500);
     border: 3px solid var(--red500);
+    border-radius: 3rem;
     transition: 300ms;
   }
 
@@ -27,14 +27,28 @@ const { title, link, type } = Astro.props;
   }
 
   .line {
+    display: block;
+    background-color: transparent;
     color: var(--white);
     border: 3px solid var(--white);
     transition: 300ms;
+    border-radius: 3rem;
+
+
   }
 
   .line:hover {
-    color: var(--grey400);
     border: 3px solid var(--grey400);
+    color: var(--grey400);
+  }
+  .grey:hover {
+    color: var(--grey400);
+    transition: 300ms;
+
+  }
+  .wide2 {
+    display: block;
+    width: 100%;
   }
 
   @media (max-width: 800px) {
@@ -44,5 +58,17 @@ const { title, link, type } = Astro.props;
     white-space: nowrap;
     font-size: 0.8rem;
   }
+
+  .wide {
+    display: block;
+    width: 100%;
+  }
+
+  .wide:hover, .wide2:hover {
+    background-color: var(--red100);
+    border: 3px solid var(--red100);
+  }
+
+
   }
 </style>
