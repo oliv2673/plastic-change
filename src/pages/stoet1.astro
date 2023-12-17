@@ -14,23 +14,31 @@ import Formular from "../components/Formular.astro";
 <Nav />
 <section class="formular">
   <div class="forms">
-  <Formular
-  overskrift="Støt os her"
-  valg="Vælg dit beløb i DKK"
-  hide="not_visible"
-  center="center"
-  tal1="50"
-  tal2="75"
-  tal3="125"
->
+    <Formular
+      overskrift="Støt os her"
+      valg="Vælg dit beløb i DKK"
+      hide="not_visible"
+      center="center"
+      tal1="50"
+      tal2="75"
+      tal3="125"
+    />
   </div>
   <div class="laesmere_con">
     <h3 class="laesmere">Læs mere om hvad din donation går til</h3>
-      <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 1024 1024">
-          <path fill="#fff" d="M831.872 340.864L512 652.672L192.128 340.864a30.592 30.592 0 0 0-42.752 0a29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728a30.592 30.592 0 0 0-42.752 0z"/>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="40"
+      height="40"
+      viewBox="0 0 1024 1024"
+    >
+      <path
+        fill="#fff"
+        d="M831.872 340.864L512 652.672L192.128 340.864a30.592 30.592 0 0 0-42.752 0a29.12 29.12 0 0 0 0 41.6L489.664 714.24a32 32 0 0 0 44.672 0l340.288-331.712a29.12 29.12 0 0 0 0-41.728a30.592 30.592 0 0 0-42.752 0z"
+      ></path>
+    </svg>
   </div>
-
-  </section>
+</section>
 <Citat />
 <Ikoner
   overskrift="Din støtte går blandt andet til at:"
@@ -73,7 +81,6 @@ import Formular from "../components/Formular.astro";
 <SoMe mode="light" />
 <Nyhedsbrev mode="dark" />
 
-
 <style>
   .omtanke {
     padding-block: var(--padding-sections);
@@ -87,45 +94,43 @@ import Formular from "../components/Formular.astro";
     max-width: 1200px;
     margin-inline: auto;
   }
-    .formular {
-        background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("../assets/img/stoet1foto.webp");
-        height: 100vh;
-        width: 100%;
-        max-width: 100%;
-        background-size: cover;
-        background-position: center 10%;
-        align-items: center;        
-    }
+  .formular {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
+      url("../assets/img/stoet1foto.webp");
+    height: 100vh;
+    width: 100%;
+    max-width: 100%;
+    background-size: cover;
+    background-position: center 10%;
+    align-items: center;
+  }
 
-    .forms {
-        display: flex;
-        justify-content: center;
-        padding-top: 80px;
+  .forms {
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+  }
 
-    }
+  .laesmere {
+    color: var(--white);
+    font-size: 1.2rem;
+    text-shadow: var(--shadows);
+    text-align: center;
+  }
+  .laesmere_con {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    flex-wrap: wrap;
+    align-items: center;
+  }
 
-    .laesmere {
-      color: var(--white);
-      font-size: 1.2rem;
-      text-shadow: var(--shadows);
-
-    }
-    .laesmere_con {
-      padding-top: 50px;
-      display: flex;
-      flex-direction: column;
-      margin: auto;
-      flex-wrap: wrap;
-      align-items: center;
-    }
-  
-    @media (max-width: 800px) {
+  @media (max-width: 800px) {
     .info_con {
       gap: 100px;
       flex-direction: column;
       padding-inline: var(--padding-sections);
     }
   }
-
-    
 </style>
